@@ -2,32 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  h1 {
+    @apply text-[58px] tracking-[2px] leading-[58px] font-bold uppercase;
+  }
+  h2 {
+    @apply text-[40px] tracking-[1.5px] leading-[44px] font-bold uppercase;
+  }
+  h3 {
+    @apply text-[32px] tracking-[1.15px] leading-[36px] font-bold uppercase;
+  }
+  h4 {
+    @apply text-[28px] tracking-[2px] leading-[38px] font-bold uppercase;
+  }
+  h5 {
+    @apply text-[24px] tracking-[1.7px] leading-[33px] font-bold uppercase;
+  }
+  h6 {
+    @apply text-[18px] tracking-[1.3px] leading-[24px] font-bold uppercase;
+  }
+  p {
+    @apply text-[15px] leading-[25px] font-medium;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .overline {
+    @apply text-[14px] leading-[19px] tracking-[1px] uppercase;
   }
+  .subtitle {
+    @apply text-[13px] leading-[25px] tracking-[1px] uppercase;
+  }
+  /* ... */
 }
