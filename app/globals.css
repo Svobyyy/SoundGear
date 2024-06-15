@@ -4,34 +4,40 @@
 
 @layer base {
   h1 {
-    @apply text-[58px] tracking-[2px] leading-[58px] font-bold uppercase;
+    @apply text-[58px] font-bold uppercase leading-[58px] tracking-[2px];
   }
   h2 {
-    @apply text-[40px] tracking-[1.5px] leading-[44px] font-bold uppercase;
+    @apply text-[40px] font-bold uppercase leading-[44px] tracking-[1.5px];
   }
   h3 {
-    @apply text-[32px] tracking-[1.15px] leading-[36px] font-bold uppercase;
+    @apply text-[32px] font-bold uppercase leading-[36px] tracking-[1.15px];
   }
   h4 {
-    @apply text-[28px] tracking-[2px] leading-[38px] font-bold uppercase;
+    @apply text-[28px] font-bold uppercase leading-[38px] tracking-[2px];
   }
   h5 {
-    @apply text-[24px] tracking-[1.7px] leading-[33px] font-bold uppercase;
+    @apply text-[24px] font-bold uppercase leading-[33px] tracking-[1.7px];
   }
   h6 {
-    @apply text-[18px] tracking-[1.3px] leading-[24px] font-bold uppercase;
+    @apply text-[18px] font-bold uppercase leading-[24px] tracking-[1.3px];
   }
   p {
-    @apply text-[15px] leading-[25px] font-medium;
+    @apply text-[15px] font-medium leading-[25px];
   }
 }
 
 @layer components {
   .overline {
-    @apply text-[14px] leading-[19px] tracking-[1px] uppercase;
+    @apply text-[14px] uppercase leading-[19px] tracking-[1px];
   }
   .subtitle {
-    @apply text-[13px] leading-[25px] tracking-[1px] uppercase;
+    @apply text-[13px] uppercase leading-[25px] tracking-[1px];
+  }
+  .margins {
+    @apply mx-10;
+  }
+  .paddings {
+    @apply px-10;
   }
   /* ... */
 }
