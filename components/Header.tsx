@@ -1,22 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import HamburgerMenu from "./HamburgerMenu";
 
 export default function Header() {
   return (
-    <section className="bg-black text-white">
-      <main className="paddings tab:justify-between tab:min-h-[97px] mx-auto flex min-h-[90px] w-full max-w-[1110px] flex-row items-center justify-between sm:justify-start">
-        <Image
-          src={"/shared/tablet/icon-hamburger.svg"}
-          width={16}
-          height={16}
-          quality={100}
-          alt="hamburger icon"
-          className="tab:hidden mr-[20px] sm:mr-[42px]"
-        />
-        <h5 className="mob:text-[25px] text-[15px] font-extrabold">
+    <header className="bg-black text-white">
+      <nav className="paddings relative mx-auto flex min-h-[90px] w-full max-w-[1110px] flex-row items-center justify-between sm:justify-start tab:min-h-[97px] tab:justify-between">
+        <HamburgerMenu />
+        <h5 className="z-40 text-[15px] font-extrabold mob:text-[25px]">
           SoundGear
         </h5>
-        <ul className="tab:flex subtitle hidden gap-[34px] font-bold tracking-[2px] transition-colors">
+        <ul className="subtitle z-40 hidden gap-[34px] font-bold tracking-[2px] transition-colors tab:flex">
           <li className="cursor-pointer hover:text-orange">
             <Link href={"/"}>HOME</Link>
           </li>
@@ -36,9 +30,9 @@ export default function Header() {
           height={20}
           quality={100}
           alt="cart icon"
-          className="tab:ml-0 sm:ml-auto"
+          className="z-40 sm:ml-auto tab:ml-0"
         />
-      </main>
-    </section>
+      </nav>
+    </header>
   );
 }
