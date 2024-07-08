@@ -7,7 +7,7 @@
     @apply text-[58px] font-bold uppercase leading-[58px] tracking-[2px];
   }
   h2 {
-    @apply text-[40px] font-bold uppercase leading-[44px] tracking-[1.5px];
+    @apply text-[28px] font-bold uppercase leading-[auto] tracking-[1px] sm:text-[40px] sm:leading-[44px] sm:tracking-[1.5px];
   }
   h3 {
     @apply text-[32px] font-bold uppercase leading-[36px] tracking-[1.15px];
@@ -27,11 +27,11 @@
 }
 
 @layer components {
-  .overline {
+  .overlinetext {
     @apply text-[14px] uppercase leading-[19px] tracking-[1px];
   }
   .subtitle {
-    @apply text-[13px] uppercase leading-[25px] tracking-[1px];
+    @apply text-[13px] font-bold uppercase leading-[25px] tracking-[1px];
   }
   .margins {
     @apply mx-10;
@@ -39,5 +39,4 @@
   .paddings {
     @apply px-10;
   }
-  /* ... */
 }
