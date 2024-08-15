@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import HamburgerMenu from "./HamburgerMenu";
+import HamburgerMenu from "./Menu/HamburgerMenu";
+import Cart from "./Cart/Cart";
 
 type props = {
   line?: boolean;
@@ -13,7 +13,7 @@ export default function Header({ line, background }: props) {
     <header
       className={`relative flex justify-center ${
         background
-          ? "mob:h-[729px] h-[600px] items-start bg-[url('/home/mobile/image-header.jpg')] bg-cover bg-center mob:bg-[url('/home/tablet/image-header.jpg')] md:bg-[url('/home/desktop/image-hero.jpg')] 2xl:bg-contain"
+          ? "h-[600px] items-start bg-[url('/home/mobile/image-header.jpg')] bg-cover bg-center mob:h-[729px] mob:bg-[url('/home/tablet/image-header.jpg')] md:bg-[url('/home/desktop/image-hero.jpg')] 2xl:bg-contain"
           : "bg-black"
       } text-white`}
     >
@@ -40,14 +40,7 @@ export default function Header({ line, background }: props) {
             <Link href={"/earphones"}>EARPHONES</Link>
           </li>
         </ul>
-        <Image
-          src={"/shared/desktop/icon-cart.svg"}
-          width={23.33}
-          height={20}
-          quality={100}
-          alt="cart icon"
-          className="z-40 cursor-pointer sm:ml-auto tab:ml-0"
-        />
+        <Cart />
       </nav>
     </header>
   );
