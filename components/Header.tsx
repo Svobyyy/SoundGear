@@ -18,7 +18,7 @@ export default function Header({ line, background }: props) {
       } text-white`}
     >
       <nav
-        className={`margins flex min-h-[90px] w-full max-w-[1110px] flex-row items-center justify-between ${line && "border-b border-white border-opacity-25"} sm:justify-start tab:min-h-[97px] tab:justify-between`}
+        className={`margins flex min-h-[90px] w-full max-w-[1110px] flex-row items-center justify-between ${line && "border-b border-white border-opacity-25"} relative sm:justify-start tab:min-h-[97px] tab:justify-between`}
       >
         <HamburgerMenu />
         <Link href={"/"} className="z-40">

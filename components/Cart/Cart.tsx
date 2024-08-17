@@ -22,7 +22,7 @@ export default function Cart() {
       />
 
       <section
-        className={`absolute right-0 top-[90px] z-20 w-full max-w-[377px] rounded-lg bg-white p-[31px] text-black transition-opacity tab:top-[97px] ${CartState ? "z-20" : "-z-10 opacity-0"}`}
+        className={`absolute right-0 top-[122px] z-20 w-full rounded-lg bg-white p-[31px] text-black transition-opacity sm:max-w-[377px] tab:top-[129px] ${CartState ? "z-20" : "-z-10 opacity-0"}`}
       >
         <div className="flex justify-between">
           <h6>Cart()</h6>

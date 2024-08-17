@@ -9,9 +9,8 @@ type props = {
 
 export default function Product({ name, price, count }: props) {
   return (
-    <div className="flex items-center justify-between">
-
-      <div className="flex gap-4">
+    <div className="gap flex flex-wrap items-center justify-between gap-3">
+      <div className="flex items-center gap-4">
         <Image
           width={64}
           height={64}
@@ -21,12 +20,11 @@ export default function Product({ name, price, count }: props) {
           src={`/cart/${name}.jpg`}
         />
         <div>
-          <h6>XX99 MK II</h6>
+          <p className="font-bold">XX99 MK II</p>
           <p className="font-bold opacity-50">$ 2,999</p>
         </div>
       </div>
       <Counter />
-
     </div>
   );
 }

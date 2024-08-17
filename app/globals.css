@@ -34,9 +34,9 @@
     @apply text-[13px] font-bold uppercase leading-[25px] tracking-[1px];
   }
   .margins {
-    @apply mx-10;
+    @apply mx-6 sm:mx-10;
   }
   .paddings {
-    @apply px-10;
+    @apply px-6 sm:px-10;
   }
 }
