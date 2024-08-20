@@ -9,7 +9,7 @@ type props = {
 
 export default function Product({ name, price, count }: props) {
   return (
-    <div className="gap flex flex-wrap items-center justify-between gap-3">
+    <li className="gap flex flex-wrap items-center justify-between gap-3">
       <div className="flex items-center gap-4">
         <Image
           width={64}
@@ -25,6 +25,6 @@ export default function Product({ name, price, count }: props) {
         </div>
       </div>
       <Counter />
-    </div>
+    </li>
   );
 }
