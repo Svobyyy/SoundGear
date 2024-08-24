@@ -1,4 +1,4 @@
-import NavigationLink from "../UI/NavigationLink";
+import SocialLink from "../UI/SocialLink";
 
 export default function FooterCopyright() {
   return (
@@ -7,10 +7,9 @@ export default function FooterCopyright() {
         Copyright 2021. All Rights Reserved
       </p>
       <ul className="z-40 flex h-[24px] gap-[16px] transition-colors tab:hidden">
-        <NavigationLink link="home" />
-        <NavigationLink link="headphones" />
-        <NavigationLink link="speakers" />
-        <NavigationLink link="earphones" />
+        <SocialLink social="facebook" />
+        <SocialLink social="twitter" />
+        <SocialLink social="instagram" />
       </ul>
     </div>
   );

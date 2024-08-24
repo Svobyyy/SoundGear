@@ -13,8 +13,8 @@ type CartContextProviderProps = {
 };
 
 type CartContext = {
-  cart: { value: number };
-  setCart: Dispatch<SetStateAction<{ value: number }>>;
+  cart: CartItem[];
+  setCart: Dispatch<SetStateAction<CartItem[]>>;
 };
 
 export const CartContext = createContext<CartContext | null>(null);
@@ -22,7 +22,7 @@ export const CartContext = createContext<CartContext | null>(null);
 export default function CartContextProvider({
   children,
 }: CartContextProviderProps) {
-  const [cart, setCart] = useState({ value: 5 });
+  const [cart, setCart] = useState<CartItem[]>([]);
 
   return (
     <CartContext.Provider value={{ cart, setCart }}>

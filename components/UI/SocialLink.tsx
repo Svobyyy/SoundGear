@@ -9,7 +9,7 @@ type props = {
 export default function SocialLink({ social }: props) {
   return (
     <li className="cursor-pointer">
-      <a href={"https://www.facebook.com/"} target="_blank">
+      <a href={`https://www.${social}.com`} target="_blank">
         {social === "facebook" && <Facebook />}
         {social === "twitter" && <Twitter />}
         {social === "instagram" && <Instagram />}

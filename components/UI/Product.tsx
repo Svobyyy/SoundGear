@@ -1,13 +1,13 @@
 import Image from "next/image";
-import Counter from "./Counter";
 
 type props = {
   name: string;
   price?: number;
   count?: number;
+  quantity?: boolean;
 };
 
-export default function Product({ name, price, count }: props) {
+export default function Product({ name, price, count, quantity }: props) {
   return (
     <li className="gap flex flex-wrap items-center justify-between gap-3">
       <div className="flex items-center gap-4">
@@ -24,7 +24,7 @@ export default function Product({ name, price, count }: props) {
           <p className="font-bold opacity-50">$ 2,999</p>
         </div>
       </div>
-      <Counter />
+      {/* <Counter quantity={quantity} /> */}
     </li>
   );
 }

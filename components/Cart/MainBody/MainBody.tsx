@@ -1,4 +1,4 @@
-import Button from "../../UI/Button";
+import Button from "../../UI/ButtonOnClick";
 
 import { Dispatch, SetStateAction } from "react";
 import ProductsCart from "./ProductsCart";
@@ -15,7 +15,7 @@ const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
 };
 
 const showCart = (CartState: boolean) => {
-  return CartState ? "z-20" : "-z-10 opacity-0";
+  return CartState ? "z-50" : "-z-10 opacity-0";
 };
 
 export default function MainBody({ setCartState, CartState }: props) {

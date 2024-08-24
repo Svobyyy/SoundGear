@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import CategoriesMenu from "./CategoriesMenu";
+import BackgroundOverlay from "../UI/BackgroundOverlay";
 
 export default function HamburgerMenu() {
   const [Menu, setMenu] = useState(false);
@@ -27,9 +28,7 @@ export default function HamburgerMenu() {
         <CategoriesMenu setMenu={setMenu} />
       </div>
 
-      <div
-        className={`min-w-screen fixed bottom-0 left-0 right-0 top-0 inline-block min-h-screen bg-black tab:hidden ${Menu ? "z-0 opacity-40" : "-z-10 opacity-0"} transition-opacity`}
-      />
+      <BackgroundOverlay showSwitch={Menu} />
     </>
   );
 }

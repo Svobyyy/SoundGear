@@ -1,11 +1,11 @@
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header";
+import Form from "@/components/Checkout/Form/Form";
+import Summary from "@/components/Checkout/Summary/Summary";
 
 export default function Home() {
   return (
-    <>
-      <Header line background />
-      <Footer />
-    </>
+    <section className="paddings bg-gray">
+      <Form />
+      <Summary />
+    </section>
   );
 }

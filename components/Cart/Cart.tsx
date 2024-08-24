@@ -2,8 +2,8 @@
 
 import { Dispatch, SetStateAction, useState } from "react";
 import CartIcon from "../icons/Cart";
-import CartBackground from "./CartBackground";
 import MainBody from "./MainBody/MainBody";
+import BackgroundOverlay from "../UI/BackgroundOverlay";
 
 const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
   setCartState((value) => !value);
@@ -20,7 +20,8 @@ export default function Cart() {
 
       <MainBody setCartState={setCartState} CartState={CartState} />
 
-      <CartBackground CartState={CartState} />
+      <BackgroundOverlay showSwitch={CartState} />
+
     </>
   );
 }
