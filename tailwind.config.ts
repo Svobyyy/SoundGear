@@ -32,6 +32,10 @@ const config: Config = {
         grayLight: "#fafafa",
         white: "#FFFFFF",
       },
+      borderColor: {
+        gray: "#CFCFCF",
+        orange: "#D87D4A",
+      },
     },
   },
   plugins: [],
