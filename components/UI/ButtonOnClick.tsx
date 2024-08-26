@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 
-type props = {
+type Props = {
   text: string;
   onClickAction: () => void;
 };
 
-export default function Button({ text, onClickAction }: props) {
+export default function Button({ text, onClickAction }: Props) {
   return (
     <Link
       onClick={onClickAction}

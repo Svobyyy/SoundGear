@@ -1,11 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
 import CategoryMenu from "./CategoryMenu";
 
-type props = {
+type Props = {
   setMenu: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function CategoriesMenu({ setMenu }: props) {
+export default function CategoriesMenu({ setMenu }: Props) {
   return (
     <ul className="margins flex flex-wrap justify-center gap-[68px] gap-x-[10px] text-black">
       <CategoryMenu category="headphones" setMenu={setMenu} />

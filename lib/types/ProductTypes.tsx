@@ -32,6 +32,7 @@ type Product = {
 };
 
 type CartItem = {
-  product: Product;
+  id: Product["id"];
+  productName: Product["name"];
   quantity: number;
 };

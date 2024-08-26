@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-type props = {
+type Props = {
   text: string;
 };
 
-export default function Button({ text }: props) {
+export default function Button({ text }: Props) {
   return (
     <Link
       href={"/checkout"}

@@ -1,9 +1,9 @@
-type props = {
+type Props = {
   className: string;
   onClick: () => void;
 };
 
-export default function CartIcon({ className, onClick }: props) {
+export default function CartIcon({ className, onClick }: Props) {
   return (
     <svg
       width="23"

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-type props = {
+type Props = {
   category: string;
 };
 
-export default function Category({ category }: props) {
+export default function Category({ category }: Props) {
   return (
     <li>
       <Link

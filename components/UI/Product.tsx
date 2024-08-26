@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-type props = {
+type Props = {
   name: string;
   price?: number;
   count?: number;
   quantity?: boolean;
 };
 
-export default function Product({ name, price, count, quantity }: props) {
+export default function Product({ name, price, count, quantity }: Props) {
   return (
     <li className="gap flex flex-wrap items-center justify-between gap-3">
       <div className="flex items-center gap-4">

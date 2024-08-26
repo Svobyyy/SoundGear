@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
 
-type props = {
+type Props = {
   category: string;
   setMenu: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function CategoryMenu({ category, setMenu }: props) {
+export default function CategoryMenu({ category, setMenu }: Props) {
   return (
     <li>
       <Link

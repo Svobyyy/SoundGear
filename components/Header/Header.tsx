@@ -3,12 +3,12 @@ import HamburgerMenu from "../Menu/HamburgerMenu";
 import Cart from "../Cart/Cart";
 import NavigationLink from "../UI/NavigationLink";
 
-type props = {
+type Props = {
   background?: boolean;
   category?: boolean;
 };
 
-export default function Header({ background }: props) {
+export default function Header({ background }: Props) {
   return (
     <header
       className={`relative flex justify-center ${
