@@ -1,12 +1,12 @@
-
+import TotalText from "./TotalText";
 
 export default function TotalCart() {
   return (
     <>
-      <div className="mb-6 flex justify-between">
-        <p className="opacity-50">TOTAL</p>
-        <h6>$5,396</h6>
-      </div>
+      <TotalText name="TOTAL" value="5,396" />
+      <TotalText name="SHIPPING" value="50" />
+      <TotalText name="VAT (INCLUDED)" value="50" />
+      <TotalText name="GRAND TOTAL" value="50" orange />
     </>
   );
 }

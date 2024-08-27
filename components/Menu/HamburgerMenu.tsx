@@ -28,7 +28,7 @@ export default function HamburgerMenu() {
         <CategoriesMenu setMenu={setMenu} />
       </div>
 
-      <BackgroundOverlay showSwitch={Menu} />
+      <BackgroundOverlay showSwitch={Menu} isMenu />
     </>
   );
 }

@@ -11,11 +11,11 @@ export default function Form() {
   // } = useForm();
 
   return (
-    <section
+    <form
       className={`z-20 w-full rounded-lg bg-white p-[31px] text-black tab:max-w-[730px]`}
     >
       <h3>CHECKOUT</h3>
       <FormSection />
-    </section>
+    </form>
   );
 }

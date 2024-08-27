@@ -45,4 +45,8 @@
   .paddings {
     @apply px-6 sm:px-10;
   }
+
+  .max {
+    @apply paddings mx-auto box-content max-w-[1110px];
+  }
 }
