@@ -15,7 +15,7 @@ const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
 };
 
 const showCart = (CartState: boolean) => {
-  return CartState ? "z-[2]" : "z-[-1] opacity-0";
+  return CartState ? "z-[2] visible" : "z-0 opacity-0 invisible";
 };
 
 export default function MainBody({ setCartState, CartState }: Props) {

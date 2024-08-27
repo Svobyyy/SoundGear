@@ -9,6 +9,8 @@ const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
   setCartState((value) => !value);
 };
 
+
+
 export default function Cart() {
   const [CartState, setCartState] = useState(false);
   return (

@@ -4,7 +4,7 @@ type Props = {
 };
 
 const showOverlay = (switcher: boolean) => {
-  return switcher ? "z-[1] opacity-40" : "-z-[1] opacity-0";
+  return switcher ? "z-[1] opacity-40 visible" : "opacity-0 invisible";
 };
 
 export default function BackgroundOverlay({ showSwitch, isMenu }: Props) {

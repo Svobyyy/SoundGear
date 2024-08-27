@@ -10,21 +10,25 @@ export default async function Category({
   params: { category: string };
 }) {
   const products = await getProductsByCategory(category);
-  console.log(products);
 
   return (
-    <section className="max my-40 flex flex-col gap-[120px]">
-      {products.map(({ name, description, categoryImage, slug, isNew }) => {
-        return (
-          <ProductShowCase
-            name={name}
-            description={description}
-            image={categoryImage}
-            slug={slug}
-            isNew={isNew}
-          />
-        );
-      })}
+    <section className="max my-[64px] sm:my-[120px] flex flex-col gap-[120px] lg:my-40">
+      {products.map(
+        ({ name, description, categoryImage, slug, isNew }, index) => {
+          return (
+            <ProductShowCase
+              category={category}
+              key={name}
+              name={name}
+              description={description}
+              image={categoryImage}
+              slug={slug}
+              isNew={isNew}
+              isOdd={index % 2 === 0 ? false : true}
+            />
+          );
+        },
+      )}
     </section>
   );
 }
