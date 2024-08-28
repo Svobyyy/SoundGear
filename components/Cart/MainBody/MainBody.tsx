@@ -15,13 +15,13 @@ const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
 };
 
 const showCart = (CartState: boolean) => {
-  return CartState ? "z-[2] visible" : "z-0 opacity-0 invisible";
+  return CartState ? "visible" : "opacity-0 invisible";
 };
 
 export default function MainBody({ setCartState, CartState }: Props) {
   return (
     <section
-      className={`absolute right-0 top-[122px] z-20 w-full rounded-lg bg-white p-[31px] text-black transition-all sm:max-w-[377px] tab:top-[129px] ${showCart(CartState)}`}
+      className={`absolute right-0 top-[122px] z-50 w-full rounded-lg bg-white p-[31px] text-black transition-all sm:max-w-[377px] tab:top-[129px] ${showCart(CartState)}`}
     >
       <HeaderCart />
 

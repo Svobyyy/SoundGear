@@ -7,24 +7,24 @@ type Props = {
 
 export default function Category({ category }: Props) {
   return (
-    <li>
+    <li className="group relative h-[165px] min-w-[150px] max-w-[350px] flex-none sm:flex-1 rounded-[8px] w-[223px] sm:w-auto bg-gray transition-colors md:h-[204px]">
       <Link
         href={`/${category}`}
-        className="group relative flex min-h-[165px] w-[223px] flex-col items-center justify-end rounded-[8px] bg-gray transition-colors"
+        className="group relative flex h-full flex-col items-center justify-end"
       >
         <Image
-          width={147}
-          height={133}
+          width={169}
+          height={163}
           alt={`${category} image`}
           quality={100}
-          className="absolute top-[-52px] h-[133px]"
+          className="absolute top-[-52px] transition-transform group-hover:translate-y-[-5px]"
           src={`/shared/desktop/image-category-thumbnail-${category}.png`}
         />
-        <p className="mb-[17px] text-[15px] font-bold uppercase tracking-[1.07px]">
+        <p className="mb-[17px] text-[15px] font-bold uppercase tracking-[1.07px] md:mb-[15px] md:text-[18px] md:tracking-[1.29px]">
           {category}
         </p>
-        <div className="mb-[22px] flex items-center gap-[14px]">
-          <p className="subtitle opacity-50 group-hover:text-orange group-hover:opacity-100">
+        <div className="mb-[22px] flex items-center gap-[14px] md:mb-[30px]">
+          <p className="subtitle leading-none opacity-50 group-hover:text-orange group-hover:opacity-100">
             SHOP
           </p>
           <Image

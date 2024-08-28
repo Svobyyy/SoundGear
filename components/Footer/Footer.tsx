@@ -1,4 +1,4 @@
-import Categories from "../Categories";
+import Categories from "../CategoriesBoxes/Categories";
 import BestAudio from "./BestAudio";
 import FooterInfo from "./FooterInfo";
 

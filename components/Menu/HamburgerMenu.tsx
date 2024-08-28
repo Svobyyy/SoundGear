@@ -6,7 +6,7 @@ import CategoriesMenu from "./CategoriesMenu";
 import BackgroundOverlay from "../UI/BackgroundOverlay";
 
 const showMenu = (menuState: boolean) => {
-  return menuState ? "z-[2] visible" : "opacity-0 invisible";
+  return menuState ? "visible" : "opacity-0 invisible";
 };
 
 export default function HamburgerMenu() {

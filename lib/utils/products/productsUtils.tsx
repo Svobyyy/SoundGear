@@ -11,11 +11,11 @@ export const getProductsByCategory = async (category: string) => {
   await connectMongo();
   const products = await ProductsModel.find({ category: `${category}` });
   products.sort((a, b) => {
-    // New Products
+    // assign isNew Products to first places
     if (a.new !== b.new) {
       return a.new ? -1 : 1;
     }
-    // Sort by id
+    // sort others by id
     return b.id - a.id;
   });
   return products;
