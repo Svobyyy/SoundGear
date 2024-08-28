@@ -8,7 +8,7 @@ type Props = {
   category?: boolean;
 };
 
-export default function Header({ background }: Props) {
+export default function Header({ background, category }: Props) {
   return (
     <header
       className={`relative flex justify-center ${
@@ -18,7 +18,7 @@ export default function Header({ background }: Props) {
       } text-white`}
     >
       <nav
-        className={`margins flex min-h-[90px] w-full max-w-[1110px] flex-row items-center justify-between ${background && "border-b border-white border-opacity-25"} relative sm:justify-start tab:min-h-[97px] tab:justify-between`}
+        className={`margins flex min-h-[90px] w-full max-w-[1110px] flex-row items-center justify-between ${(background || category) && "border-b border-white border-opacity-25"} relative sm:justify-start tab:min-h-[97px] tab:justify-between`}
       >
         <HamburgerMenu />
         <Link href={"/"} className="z-40">

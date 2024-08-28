@@ -12,24 +12,27 @@ export default async function Category({
   const products = await getProductsByCategory(category);
 
   return (
-    <section className="max my-[64px] sm:my-[120px] flex flex-col gap-[120px] lg:my-40">
-      {products.map(
-        ({ name, description, categoryImage, slug, isNew }, index) => {
-          return (
-            <ProductShowCase
-              category={category}
-              key={name}
-              name={name}
-              description={description}
-              image={categoryImage}
-              slug={slug}
-              isNew={isNew}
-              isOdd={index % 2 === 0 ? false : true}
-            />
-          );
-        },
-      )}
-    </section>
+    <>
+      <h2 className="py-8 sm:py-[98px] bg-black text-white text-center">{category}</h2>
+      <section className="max my-[64px] flex flex-col gap-[120px] sm:my-[120px] lg:my-40">
+        {products.map(
+          ({ name, description, categoryImage, slug, isNew }, index) => {
+            return (
+              <ProductShowCase
+                category={category}
+                key={name}
+                name={name}
+                description={description}
+                image={categoryImage}
+                slug={slug}
+                isNew={isNew}
+                isOdd={index % 2 === 0 ? false : true}
+              />
+            );
+          },
+        )}
+      </section>
+    </>
   );
 }
 
