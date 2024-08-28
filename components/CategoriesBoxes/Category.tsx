@@ -7,7 +7,7 @@ type Props = {
 
 export default function Category({ category }: Props) {
   return (
-    <li className="group relative h-[165px] w-[223px] w-full min-w-[150px] rounded-[8px] bg-gray transition-colors sm:w-auto sm:max-w-[350px] sm:flex-1 md:h-[204px]">
+    <li className="group relative h-[165px] w-full min-w-[150px] rounded-[8px] bg-gray transition-colors sm:w-auto sm:max-w-[350px] sm:flex-1 md:h-[204px]">
       <Link
         href={`/${category}`}
         className="group relative flex h-full flex-col items-center justify-end"
