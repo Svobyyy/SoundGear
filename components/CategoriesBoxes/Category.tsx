@@ -17,7 +17,7 @@ export default function Category({ category }: Props) {
           height={163}
           alt={`${category} image`}
           quality={100}
-          className="absolute top-[-52px] transition-transform group-hover:translate-y-[-5px]"
+          className="absolute top-[-52px] h-[163px] w-[169px] transition-transform group-hover:translate-y-[-5px] object-cover"
           src={`/shared/desktop/image-category-thumbnail-${category}.png`}
         />
         <p className="mb-[17px] text-[15px] font-bold uppercase tracking-[1.07px] md:mb-[15px] md:text-[18px] md:tracking-[1.29px]">

@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-[58px] font-bold uppercase leading-[58px] tracking-[2px];
+    @apply text-[36px] font-bold uppercase leading-[40px] tracking-[1.29px] sm:text-[56px] sm:leading-[58px] sm:tracking-[2px];
   }
   h2 {
     @apply text-[28px] font-bold uppercase leading-[auto] tracking-[1px] sm:text-[40px] sm:leading-[44px] sm:tracking-[1.5px];
