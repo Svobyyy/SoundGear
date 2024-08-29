@@ -2,7 +2,7 @@ import Link from "next/link";
 import HamburgerMenu from "../Menu/HamburgerMenu";
 import Cart from "../Cart/Cart";
 import NavigationLink from "../UI/NavigationLink";
-import Button from "../UI/Button";
+import NewProduct from "./NewProduct";
 
 type Props = {
   background?: boolean;
@@ -36,21 +36,7 @@ export default function Header({ background, category }: Props) {
         <Cart />
       </nav>
 
-      {background && (
-        <section className="mt-[108px] flex w-full max-w-[1110px] justify-center sm:mt-[128px] tab:justify-start paddings sm:px-0">
-          <div className="flex max-w-[378px] flex-col items-center justify-center text-center tab:items-start tab:justify-start tab:text-start">
-            <p className="mb-6 text-[14px] tracking-[10px] text-white opacity-50 sm:mb-4">
-              NEW PRODUCT
-            </p>
-            <h1 className="sm:max-w-[400px]">XX99 Mark II HeadphoneS</h1>
-            <p className="my-7 opacity-50 sm:mb-10 sm:mt-6">
-              Experience natural, lifelike audio and exceptional build quality
-              made for the passionate music enthusiast.
-            </p>
-            <Button text="SEE PRODUCT" navigateTo={`headphones`} maxWidth />
-          </div>
-        </section>
-      )}
+      {background && <NewProduct />}
     </header>
   );
 }

@@ -20,3 +20,9 @@ export const getProductsByCategory = async (category: string) => {
   });
   return products;
 };
+
+export const getProduct = async (filterBy: string, filterValue: string) => {
+  await connectMongo();
+  const product = await ProductsModel.findOne({ [filterBy]: filterValue });
+  return product;
+};

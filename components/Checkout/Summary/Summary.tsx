@@ -6,12 +6,12 @@ import TotalCart from "./TotalCart";
 export default function Summary() {
   return (
     <section
-      className={`z-20 w-full rounded-lg bg-white p-[31px] text-black tab:max-w-[350px]`}
+      className={`w-full rounded-lg bg-white p-[31px] text-black tab:max-w-[350px]`}
     >
       <h6>SUMMARY</h6>
       <ProductsCart quantity />
       <TotalCart />
-      <Button text="checkout" />
+      <Button text="checkout" navigateTo="checkout" />
     </section>
   );
 }

@@ -3,17 +3,22 @@ import {
   getProducts,
   getProductsByCategory,
 } from "@/lib/utils/products/productsUtils";
+import { notFound } from "next/navigation";
 
-export default async function Category({
-  params: { category },
-}: {
+type Props = {
   params: { category: string };
-}) {
+};
+
+export default async function Category({ params: { category } }: Props) {
   const products = await getProductsByCategory(category);
+
+  if (products.length === 0) notFound();
 
   return (
     <>
-      <h2 className="py-8 sm:py-[98px] bg-black text-white text-center">{category}</h2>
+      <h2 className="bg-black py-8 text-center text-white sm:py-[98px]">
+        {category}
+      </h2>
       <section className="max my-[64px] flex flex-col gap-[120px] sm:my-[120px] lg:my-40">
         {products.map(
           ({ name, description, categoryImage, slug, isNew }, index) => {
