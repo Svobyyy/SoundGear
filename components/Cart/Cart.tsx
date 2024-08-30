@@ -9,21 +9,15 @@ const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
   setCartState((value) => !value);
 };
 
-
-
 export default function Cart() {
   const [CartState, setCartState] = useState(false);
   return (
     <>
-      <CartIcon
-        className="z-40 cursor-pointer sm:ml-auto tab:ml-0"
-        onClick={() => cartSwitch(setCartState)}
-      />
+      <CartIcon onClick={() => cartSwitch(setCartState)} />
 
       <MainBody setCartState={setCartState} CartState={CartState} />
 
       <BackgroundOverlay showSwitch={CartState} />
-
     </>
   );
 }

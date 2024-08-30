@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import CategoriesMenu from "./CategoriesMenu";
 import BackgroundOverlay from "../UI/BackgroundOverlay";
+import Hamburger from "../icons/Hamburger";
 
 const showMenu = (menuState: boolean) => {
   return menuState ? "visible" : "opacity-0 invisible";
@@ -14,13 +14,7 @@ export default function HamburgerMenu() {
 
   return (
     <>
-      <Image
-        src={"/shared/tablet/icon-hamburger.svg"}
-        width={16}
-        height={16}
-        quality={100}
-        alt="hamburger icon"
-        className="z-40 cursor-pointer sm:mr-[42px] tab:hidden"
+      <Hamburger
         onClick={() => {
           setMenu((value) => !value);
         }}

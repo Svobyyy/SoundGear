@@ -14,7 +14,7 @@ export default function Header({ background, category }: Props) {
     <header
       className={`sm:paddings relative flex flex-col items-center ${
         background
-          ? "h-[600px] items-start bg-[url('/home/mobile/image-header.jpg')] bg-cover bg-center mob:h-[729px] mob:bg-[url('/home/tablet/image-header.jpg')] tab:bg-[url('/home/desktop/image-hero.jpg')] 2xl:bg-contain"
+          ? "mb-10 h-[600px] items-start bg-[url('/home/mobile/image-header.jpg')] bg-cover bg-center mob:h-[729px] mob:bg-[url('/home/tablet/image-header.jpg')] sm:mb-[96px] tab:mb-[120px] tab:bg-[url('/home/desktop/image-hero.jpg')] 2xl:bg-contain"
           : "bg-black"
       } text-white`}
     >
@@ -23,7 +23,7 @@ export default function Header({ background, category }: Props) {
       >
         <HamburgerMenu />
         <Link href={"/"} className="z-40">
-          <h5 className="z-40 text-[15px] font-extrabold mob:text-[25px]">
+          <h5 className="z-40 text-[15px] font-extrabold transition-colors hover:text-orange mob:text-[25px]">
             SoundGear
           </h5>
         </Link>

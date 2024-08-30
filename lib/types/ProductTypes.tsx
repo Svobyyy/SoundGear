@@ -22,7 +22,7 @@ type Product = {
   image: ImageSizes;
   category: string;
   categoryImage: ImageSizes;
-  new: boolean;
+  isNewProduct: boolean;
   price: number;
   description: string;
   features: string;

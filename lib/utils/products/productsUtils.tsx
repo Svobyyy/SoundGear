@@ -1,5 +1,5 @@
-import ProductsModel from "@/lib/models/ProductsModel";
-import connectMongo from "../connect-mongo";
+import ProductsModel from "@/lib/models/productsModel";
+import connectMongo from "../db/connectMongo";
 
 export const getProducts = async () => {
   await connectMongo();

@@ -1,15 +1,14 @@
 type Props = {
-  className: string;
   onClick: () => void;
 };
 
-export default function CartIcon({ className, onClick }: Props) {
+export default function CartIcon({ onClick }: Props) {
   return (
     <svg
       width="23"
       height="20"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${className}`}
+      className="z-40 cursor-pointer sm:ml-auto tab:ml-0"
       onClick={onClick}
     >
       <path

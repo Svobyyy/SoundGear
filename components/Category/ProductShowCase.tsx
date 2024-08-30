@@ -11,7 +11,7 @@ type Props = {
     desktop: string;
   };
   category: string;
-  isNew?: boolean;
+  isNewProduct?: boolean;
   isOdd: boolean;
 };
 
@@ -19,7 +19,7 @@ export default function ProductShowCase({
   name,
   description,
   slug,
-  isNew,
+  isNewProduct,
   category,
   isOdd,
   image: { mobile, tablet, desktop },
@@ -54,7 +54,7 @@ export default function ProductShowCase({
       />
 
       <div className="flex max-w-[572px] flex-col items-center lg:max-w-[445px] lg:items-start">
-        {isNew && (
+        {isNewProduct && (
           <p className="mb-6 text-[14px] tracking-[10px] text-orange sm:mb-4">
             NEW PRODUCT
           </p>

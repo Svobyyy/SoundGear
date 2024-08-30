@@ -21,7 +21,7 @@ export default async function Category({ params: { category } }: Props) {
       </h2>
       <section className="max my-[64px] flex flex-col gap-[120px] sm:my-[120px] lg:my-40">
         {products.map(
-          ({ name, description, categoryImage, slug, isNew }, index) => {
+          ({ name, description, categoryImage, slug, isNewProduct }, index) => {
             return (
               <ProductShowCase
                 category={category}
@@ -30,7 +30,7 @@ export default async function Category({ params: { category } }: Props) {
                 description={description}
                 image={categoryImage}
                 slug={slug}
-                isNew={isNew}
+                isNewProduct={isNewProduct}
                 isOdd={index % 2 === 0 ? false : true}
               />
             );

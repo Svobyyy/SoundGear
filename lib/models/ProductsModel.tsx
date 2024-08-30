@@ -42,7 +42,7 @@ const ProductSchema = new Schema({
   image: { type: imageSchema, required: true },
   category: { type: String, required: true },
   categoryImage: { type: imageSchema, required: true },
-  isNew: { type: Boolean, required: true },
+  isNewProduct: { type: Boolean, required: true },
   price: { type: Number, required: true },
   description: { type: String, required: true },
   features: { type: String, required: true },

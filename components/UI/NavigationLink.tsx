@@ -10,7 +10,7 @@ const returnHome = (link: string) => {
 
 export default function NavigationLink({ link }: Props) {
   return (
-    <li className="cursor-pointer uppercase hover:text-orange">
+    <li className="cursor-pointer uppercase transition-all hover:text-orange">
       <Link href={returnHome(link)}>{link.toUpperCase()}</Link>
     </li>
   );
