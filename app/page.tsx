@@ -16,9 +16,9 @@ export default function Home() {
       <Categories />
       <section className="max">
         <ProductBoxes info={primaryHomeBox} />
-        <ProductBoxes info={secondaryHomeBox} />
+        {/* <ProductBoxes info={secondaryHomeBox} />
         <ProductBoxes info={tertiaryHomeBox} />
-        <ProductBoxes info={quaternaryHomeBox} />
+        <ProductBoxes info={quaternaryHomeBox} /> */}
       </section>
       <Footer bestaudio />
     </>

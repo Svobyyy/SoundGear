@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     screens: {
       tab: "900px",
+      main: "1080px",
       mob: "400px",
       ...defaultTheme.screens,
     },
