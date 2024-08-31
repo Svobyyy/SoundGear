@@ -16,11 +16,14 @@ export default function Home() {
       <Categories />
       <section className="max mt-[120px] sm:mt-[96px] lg:mt-[170px]">
         <ProductBoxes info={primaryHomeBox} />
-        <ProductBoxes info={secondaryHomeBox} />
 
-        <div className="flex gap-3">
-          <ProductBoxes info={tertiaryHomeBox} />
-          <ProductBoxes info={quaternaryHomeBox} />
+        <div className="my-6 sm:my-8 lg:my-12">
+          <ProductBoxes info={secondaryHomeBox} />
+        </div>
+
+        <div className="tab:flex-row tab:min-h-0 flex h-full min-h-[424px] flex-col gap-3">
+          <ProductBoxes info={tertiaryHomeBox} smallBoxes />
+          <ProductBoxes info={quaternaryHomeBox} smallBoxes />
         </div>
       </section>
       <Footer bestaudio />
