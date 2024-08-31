@@ -14,11 +14,14 @@ export default function Home() {
     <>
       <Header background />
       <Categories />
-      <section className="max">
+      <section className="max mt-[120px] sm:mt-[96px] lg:mt-[170px]">
         <ProductBoxes info={primaryHomeBox} />
         <ProductBoxes info={secondaryHomeBox} />
-        <ProductBoxes info={tertiaryHomeBox} />
-        <ProductBoxes info={quaternaryHomeBox} />
+
+        <div className="flex gap-3">
+          <ProductBoxes info={tertiaryHomeBox} />
+          <ProductBoxes info={quaternaryHomeBox} />
+        </div>
       </section>
       <Footer bestaudio />
     </>

@@ -36,3 +36,29 @@ type CartItem = {
   productName: Product["name"];
   quantity: number;
 };
+
+type homeProduct = {
+  info: {
+    name?: string;
+    description?: string;
+    image?: {
+      desktop?: {
+        source: string;
+        width: number;
+        height: number;
+      };
+      tablet?: {
+        source: string;
+        width: number;
+        height: number;
+      };
+      mobile?: {
+        source: string;
+        width: number;
+        height: number;
+      };
+    };
+    category?: string;
+    slug?: string;
+  };
+};

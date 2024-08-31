@@ -11,6 +11,7 @@ const config: Config = {
     screens: {
       tab: "900px",
       main: "1080px",
+      maintab: "790px",
       mob: "400px",
       ...defaultTheme.screens,
     },

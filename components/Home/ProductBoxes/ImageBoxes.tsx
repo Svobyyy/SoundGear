@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { quaternaryHomeBox } from "@/lib/constants";
+import { table } from "console";
 
 type Props = {
   image: {
@@ -33,14 +34,38 @@ export default function ImageBoxes({
 }: Props) {
   return (
     <>
-      <Image
-        quality={100}
-        alt={`${name || quaternaryHomeBox.name} photo`}
-        width={!name ? 540 : primary ? 410 : 1110}
-        height={primary ? 493 : 1110}
-        className={`${primary ? primaryBoxStyle : "bottom-0 left-0 h-full object-cover"} absolute`}
-        src={`${desktop?.source}`}
-      />
+      {desktop && (
+        <Image
+          quality={100}
+          alt={`${name || quaternaryHomeBox.name} photo`}
+          width={desktop?.width}
+          height={desktop?.height}
+          className={`${primary ? primaryBoxStyle : "maintab:inline-block bottom-0 left-0 hidden h-full object-cover"} absolute`}
+          src={`${desktop?.source}`}
+        />
+      )}
+
+      {tablet && (
+        <Image
+          quality={100}
+          alt={`${name || quaternaryHomeBox.name} photo`}
+          width={tablet?.width}
+          height={tablet?.height}
+          className={`maintab:hidden absolute bottom-0 left-0 hidden h-full object-cover mob:inline-block`}
+          src={`${tablet?.source}`}
+        />
+      )}
+
+      {mobile && (
+        <Image
+          quality={100}
+          alt={`${name || quaternaryHomeBox.name} photo`}
+          width={mobile?.width}
+          height={mobile?.height}
+          className={`absolute bottom-0 left-0 h-full object-cover mob:hidden`}
+          src={`${mobile?.source}`}
+        />
+      )}
     </>
   );
 }
