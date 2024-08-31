@@ -3,9 +3,11 @@
 export const primaryHomeBox = {
   name: "ZX9 SPEAKER",
   image: {
-    desktop: "/home/desktop/image-speaker-zx9.png",
-    tablet: "/home/tablet/image-speaker-zx9.png",
-    mobile: "/home/mobile/image-speaker-zx9.png",
+    desktop: {
+      source: "/home/desktop/image-speaker-zx9.png",
+      width: 410,
+      height: 493,
+    },
   },
   category: "speakers",
   slug: "zx9-speaker",
@@ -16,20 +18,43 @@ export const primaryHomeBox = {
 export const secondaryHomeBox = {
   name: "ZX7 SPEAKER",
   image: {
-    desktop: "/home/desktop/image-speaker-zx7.jpg",
-    tablet: "/home/tablet/image-speaker-zx7.jpg",
-    mobile: "/home/mobile/image-speaker-zx7.jpg",
+    desktop: {
+      source: "/home/desktop/image-speaker-zx7.jpg",
+      width: 1110,
+      height: 320,
+    },
+    tablet: {
+      source: "/home/tablet/image-speaker-zx7.jpg",
+      width: 790,
+      height: 736,
+    },
+    mobile: {
+      source: "/home/mobile/image-speaker-zx7.jpg",
+      width: 654,
+      height: 736,
+    },
   },
   slug: "zx7-speaker",
   category: "speakers",
 };
 
 export const tertiaryHomeBox = {
-  name: "YX1 EARPHONES",
   image: {
-    desktop: "/home/desktop/image-earphones-yx1.jpg",
-    tablet: "/home/tablet/image-earphones-yx1.jpg",
-    mobile: "/home/mobile/image-earphones-yx1.jpg",
+    desktop: {
+      source: "/home/desktop/image-earphones-yx1.jpg",
+      width: 1110,
+      height: 320,
+    },
+    tablet: {
+      source: "/home/tablet/image-earphones-yx1.jpg",
+      width: 790,
+      height: 736,
+    },
+    mobile: {
+      source: "/home/mobile/image-earphones-yx1.jpg",
+      width: 654,
+      height: 736,
+    },
   },
 };
 

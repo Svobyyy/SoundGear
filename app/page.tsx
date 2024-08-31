@@ -1,7 +1,7 @@
 import Categories from "@/components/CategoriesBoxes/Categories";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import ProductBoxes from "@/components/Home/ProductBoxes";
+import ProductBoxes from "@/components/Home/ProductBoxes/ProductBoxes";
 import {
   primaryHomeBox,
   quaternaryHomeBox,
@@ -16,9 +16,9 @@ export default function Home() {
       <Categories />
       <section className="max">
         <ProductBoxes info={primaryHomeBox} />
-        {/* <ProductBoxes info={secondaryHomeBox} />
+        <ProductBoxes info={secondaryHomeBox} />
         <ProductBoxes info={tertiaryHomeBox} />
-        <ProductBoxes info={quaternaryHomeBox} /> */}
+        <ProductBoxes info={quaternaryHomeBox} />
       </section>
       <Footer bestaudio />
     </>
