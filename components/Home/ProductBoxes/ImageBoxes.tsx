@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { quaternaryHomeBox } from "@/lib/constants";
-import { table } from "console";
 
 type Props = {
   image: {
@@ -37,10 +36,10 @@ export default function ImageBoxes({
       {desktop && (
         <Image
           quality={100}
-          alt={`${name || quaternaryHomeBox.name} photo`}
+          alt={`${name || quaternaryHomeBox.name} photo`} // box without a text
           width={desktop?.width}
           height={desktop?.height}
-          className={`${primary ? primaryBoxStyle : "maintab:inline-block bottom-0 left-0 hidden h-full object-cover"} absolute`}
+          className={`${primary ? primaryBoxStyle : "bottom-0 left-0 hidden h-full object-cover maintab:inline-block"} absolute`}
           src={`${desktop?.source}`}
         />
       )}
@@ -51,7 +50,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`}
           width={tablet?.width}
           height={tablet?.height}
-          className={`maintab:hidden absolute bottom-0 left-0 hidden h-full object-cover mob:inline-block`}
+          className={`absolute bottom-0 left-0 hidden h-full object-cover mob:inline-block maintab:hidden`}
           src={`${tablet?.source}`}
         />
       )}

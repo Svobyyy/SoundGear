@@ -21,7 +21,7 @@ export default function Home() {
           <ProductBoxes info={secondaryHomeBox} />
         </div>
 
-        <div className="tab:flex-row tab:min-h-0 flex h-full min-h-[424px] flex-col gap-3">
+        <div className="flex h-full min-h-[424px] flex-col gap-3 tab:min-h-0 tab:flex-row">
           <ProductBoxes info={tertiaryHomeBox} smallBoxes />
           <ProductBoxes info={quaternaryHomeBox} smallBoxes />
         </div>
