@@ -1,7 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "./Input";
-import FormSection from "./FormSection";
-import Payment from "./Payment";
+import Payment from "./PaymentInput";
+import CashText from "./CashText";
 
 export default function Form() {
   // const {
@@ -39,6 +39,7 @@ export default function Form() {
         <Input placeholder="alexei@mail.com" labelName="Email Address" />
         <Input placeholder="+1 202-555-0136" labelName="Phone Number" />
       </div>
+      <CashText />
     </form>
   );
 }
