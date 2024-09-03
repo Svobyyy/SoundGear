@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Button from "../UI/Button";
+import { formatter } from "@/lib/utils/products/productsUtils";
 
 type Props = {
   name: string;
   description: string;
-  slug: string;
+  price: number;
+  id: number;
   image: {
     mobile: string;
     tablet: string;
@@ -12,22 +14,18 @@ type Props = {
   };
   category: string;
   isNewProduct?: boolean;
-  isOdd: boolean;
 };
 
-export default function ProductShowCase({
+export default function Product({
   name,
   description,
-  slug,
+  price,
   isNewProduct,
   category,
-  isOdd,
   image: { mobile, tablet, desktop },
 }: Props) {
   return (
-    <div
-      className={`flex items-center justify-between gap-8 text-center sm:gap-[52px] lg:gap-5 lg:text-left ${isOdd && "lg:flex-row-reverse"} flex-col lg:flex-row`}
-    >
+    <div className="flex flex-col items-center justify-between gap-8 sm:flex-row sm:gap-5">
       <Image
         width={540}
         height={560}
@@ -37,11 +35,11 @@ export default function ProductShowCase({
         src={desktop}
       />
       <Image
-        width={1378}
-        height={704}
+        width={562}
+        height={960}
         alt={`${name} image`}
         quality={100}
-        className="hidden min-h-[400px] rounded-lg object-cover sm:inline-block lg:hidden"
+        className="hidden max-h-[480px] max-w-[380px] rounded-lg object-cover sm:inline-block lg:hidden"
         src={tablet}
       />
       <Image
@@ -53,19 +51,17 @@ export default function ProductShowCase({
         className="inline-block min-h-[380px] rounded-lg object-cover sm:hidden"
       />
 
-      <div className="flex max-w-[572px] flex-col items-center lg:max-w-[445px] lg:items-start">
+      <div className="flex max-w-[572px] flex-col items-start sm:max-w-[445px]">
         {isNewProduct && (
           <p className="mb-6 text-[14px] tracking-[10px] text-orange sm:mb-4">
             NEW PRODUCT
           </p>
         )}
-        <h2 className="max-w-[200px] sm:max-w-[400px]">{name}</h2>
+        <h2 className="max-w-[200px] sm:max-w-[400px] sm:text-[28px] maintab:text-[40px]">
+          {name}
+        </h2>
         <p className="mb-6 mt-6 opacity-50 sm:mt-8 lg:mb-10">{description}</p>
-        <Button
-          text="SEE PRODUCT"
-          navigateTo={`${category}/${slug}`}
-          maxWidth
-        />
+        <h6>{formatter.format(price)}</h6>
       </div>
     </div>
   );

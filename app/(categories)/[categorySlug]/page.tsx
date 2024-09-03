@@ -6,25 +6,25 @@ import {
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: { category: string };
+  params: { categorySlug: string };
 };
 
-export default async function Category({ params: { category } }: Props) {
-  const products = await getProductsByCategory(category);
+export default async function Category({ params: { categorySlug } }: Props) {
+  const products = await getProductsByCategory(categorySlug);
 
   if (products.length === 0) notFound();
 
   return (
     <>
       <h2 className="bg-black py-8 text-center text-white sm:py-[98px]">
-        {category}
+        {categorySlug}
       </h2>
       <section className="max my-[64px] flex flex-col gap-[120px] sm:my-[120px] lg:my-40">
         {products.map(
           ({ name, description, categoryImage, slug, isNewProduct }, index) => {
             return (
               <ProductShowCase
-                category={category}
+                category={categorySlug}
                 key={name}
                 name={name}
                 description={description}
@@ -45,6 +45,6 @@ export async function generateStaticParams() {
   const products = await getProducts();
 
   return products.map((product) => ({
-    category: product.category,
+    categorySlug: product.category,
   }));
 }

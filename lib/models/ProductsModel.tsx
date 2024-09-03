@@ -35,21 +35,23 @@ const otherSchema = new Schema(
   { _id: false },
 );
 
-const ProductSchema = new Schema({
-  id: { type: Number, required: true, unique: true },
-  slug: { type: String, required: true },
-  name: { type: String, required: true },
-  image: { type: imageSchema, required: true },
-  category: { type: String, required: true },
-  categoryImage: { type: imageSchema, required: true },
-  isNewProduct: { type: Boolean, required: true },
-  price: { type: Number, required: true },
-  description: { type: String, required: true },
-  features: { type: String, required: true },
-  includes: { type: [includeSchema], required: true },
-  gallery: { type: gallerySchema, required: true },
-  others: { type: [otherSchema], required: true },
-});
+const ProductSchema = new Schema(
+  {
+    id: { type: Number, required: true, unique: true },
+    slug: { type: String, required: true },
+    name: { type: String, required: true },
+    image: { type: imageSchema, required: true },
+    category: { type: String, required: true },
+    categoryImage: { type: imageSchema, required: true },
+    isNewProduct: { type: Boolean, required: true },
+    price: { type: Number, required: true },
+    description: { type: String, required: true },
+    features: { type: String, required: true },
+    includes: { type: [includeSchema], required: true },
+    gallery: { type: gallerySchema, required: true },
+    others: { type: [otherSchema], required: true },
+  },
+);
 
 const ProductsModel = models.Product || model("Product", ProductSchema);
 

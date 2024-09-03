@@ -7,7 +7,7 @@ export const getProducts = async () => {
   return products;
 };
 
-// assign isNew Products to first places, sort other products which arent new by id
+// assign isNewProduct Products to first places, sort other products which arent new by id
 export const getProductsByCategory = async (category: string) => {
   await connectMongo();
   const products = await ProductsModel.find({ category: `${category}` });
@@ -27,3 +27,9 @@ export const getProduct = async (filterBy: string, filterValue: string) => {
   const product = await ProductsModel.findOne({ [filterBy]: filterValue });
   return product;
 };
+
+export const formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 0,
+});
