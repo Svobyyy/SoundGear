@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-type Props = {
-  name: string;
-  price?: number;
-  count?: number;
-  quantity?: boolean;
-};
+const formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  minimumFractionDigits: 0,
+});
 
-export default function Product({ name, price, count, quantity }: Props) {
+export default function Product({ name, price, quantity, id }: CartItemProps) {
+
   return (
     <li className="gap flex flex-wrap items-center justify-between gap-3">
       <div className="flex items-center gap-4">
@@ -17,14 +17,13 @@ export default function Product({ name, price, count, quantity }: Props) {
           alt={`${name} cart`}
           quality={100}
           className="rounded-lg"
-          src={`/cart/${name}.jpg`}
+          src={`/cart/${id}.jpg`}
         />
         <div>
-          <p className="font-bold">XX99 MK II</p>
-          <p className="font-bold opacity-50">$ 2,999</p>
+          <p className="font-bold">{name}</p>
+          <p className="font-bold opacity-50">{formatter.format(price)}</p>
         </div>
       </div>
-      {/* <Counter quantity={quantity} /> */}
     </li>
   );
 }

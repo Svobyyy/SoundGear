@@ -1,31 +1,35 @@
 import { Dispatch, SetStateAction } from "react";
 
 const addToQuantity = (
-  cart: CartItem[],
   setCart: Dispatch<SetStateAction<CartItem[]>>,
+  price: number,
+  name: string,
   id: number,
-  amount: number,
 ) => {
   setCart((prevCart) => {
-    const updatedCart = prevCart.map((item) =>
-      item.id === id ? { ...item, quantity: item.quantity + amount } : item,
-    );
-    return updatedCart;
+    const itemExists = prevCart.some((item) => item.id === id);
+
+    if (itemExists) {
+      return prevCart.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
+      );
+    } else {
+      return [...prevCart, { id, name, price, quantity: 1 }];
+    }
   });
 };
 
 const decreaseQuantity = (
-  cart: CartItem[],
   setCart: Dispatch<SetStateAction<CartItem[]>>,
   id: number,
-  amount: number,
 ) => {
   setCart((prevCart) => {
-    const updatedCart = prevCart.map((item) =>
-      item.id === id
-        ? { ...item, quantity: Math.max(0, item.quantity - amount) }
-        : item,
-    );
+    const updatedCart = prevCart
+      .map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity - 1 } : item,
+      )
+      .filter((item) => item.quantity > 0);
+
     return updatedCart;
   });
 };

@@ -10,7 +10,8 @@ export default async function page({
   params: { productSlug, categorySlug },
 }: Props) {
   const product: Product = await getProduct("slug", productSlug);
-  const { name, isNewProduct, slug, description, price, image, id, category } =
+
+  const { name, isNewProduct, description, price, image, id, category } =
     product;
   if (category !== categorySlug) notFound();
 
@@ -21,10 +22,8 @@ export default async function page({
         description={description}
         price={price}
         image={image}
-        slug={slug}
         isNewProduct={isNewProduct}
         id={id}
-        category={category}
       />
     </section>
   );

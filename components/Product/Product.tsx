@@ -1,6 +1,8 @@
 import Image from "next/image";
-import Button from "../UI/Button";
+import Counter from "../UI/Counter";
 import { formatter } from "@/lib/utils/products/productsUtils";
+import ButtonOnClick from "../UI/ButtonOnClick";
+import ProductCounter from "./ProductCounter";
 
 type Props = {
   name: string;
@@ -12,7 +14,6 @@ type Props = {
     tablet: string;
     desktop: string;
   };
-  category: string;
   isNewProduct?: boolean;
 };
 
@@ -21,9 +22,14 @@ export default function Product({
   description,
   price,
   isNewProduct,
-  category,
+  id,
   image: { mobile, tablet, desktop },
 }: Props) {
+  
+
+
+
+
   return (
     <div className="flex flex-col items-center justify-between gap-8 sm:flex-row sm:gap-5">
       <Image
@@ -61,7 +67,9 @@ export default function Product({
           {name}
         </h2>
         <p className="mb-6 mt-6 opacity-50 sm:mt-8 lg:mb-10">{description}</p>
-        <h6>{formatter.format(price)}</h6>
+        <p>{formatter.format(price)}</p>
+
+        <ProductCounter id={id} name={name} price={price} />
       </div>
     </div>
   );

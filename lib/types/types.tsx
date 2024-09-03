@@ -31,12 +31,6 @@ type Product = {
   others: Product[];
 };
 
-type CartItem = {
-  id: Product["id"];
-  productName: Product["name"];
-  quantity: number;
-};
-
 type homeProduct = {
   info: {
     name?: string;
@@ -61,4 +55,24 @@ type homeProduct = {
     category?: string;
     slug?: string;
   };
+};
+
+type CartItem = {
+  id: Product["id"];
+  name: Product["name"];
+  price: Product["price"];
+  quantity: number;
+};
+
+type CartCounterProps = {
+  id: Product["id"];
+  name: Product["name"];
+  price: Product["price"];
+};
+
+type CartItemProps = {
+  id: Product["id"];
+  name: Product["name"];
+  price: Product["price"];
+  quantity: number;
 };
