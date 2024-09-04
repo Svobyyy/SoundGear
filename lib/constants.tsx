@@ -1,3 +1,12 @@
+export const MAX_NUMBER_OF_PRODUCTS = 9;
+
+export const REMOVE_FROM_NAME = [
+  "Wireless",
+  "Earphones",
+  "Headphones",
+  "Speaker",
+];
+
 // HomePage Products
 
 export const primaryHomeBox = {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Arrow from "../icons/Arrow";
+import Arrow from "../../icons/Arrow";
 
 type Props = {
   category: string;

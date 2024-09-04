@@ -1,4 +1,4 @@
-import Categories from "../CategoriesBoxes/Categories";
+import Categories from "../UI/CategoriesBoxes/Categories";
 import BestAudio from "./BestAudio";
 import FooterInfo from "./FooterInfo";
 
