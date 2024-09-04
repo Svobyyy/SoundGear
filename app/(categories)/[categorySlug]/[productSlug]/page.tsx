@@ -1,3 +1,4 @@
+import ProductGallery from "@/components/Product/Gallery/ProductGallery";
 import Includes from "@/components/Product/Includes/Includes";
 import Product from "@/components/Product/MainProduct/Product";
 import { getProduct, getProducts } from "@/lib/utils/products/productsUtils";
@@ -19,6 +20,7 @@ export default async function page({
     price,
     image,
     id,
+    gallery,
     category,
     includes,
     features,
@@ -36,6 +38,7 @@ export default async function page({
         id={id}
       />
       <Includes includes={includes} features={features} />
+      <ProductGallery gallery={gallery} />
     </section>
   );
 }

@@ -13,7 +13,7 @@ export default function Button({ text, onClickAction, width }: Props) {
     <Link
       onClick={onClickAction}
       href={"/checkout"}
-      className={`${width && "w-[160px]"} subtitle inline-block w-full cursor-pointer bg-orange py-[17.5px] text-center uppercase leading-none text-white transition-colors hover:bg-orangeLight`}
+      className={`${width ? "w-[160px]" : "w-full"} subtitle inline-block cursor-pointer bg-orange py-[17.5px] text-center uppercase leading-none text-white transition-colors hover:bg-orangeLight`}
     >
       {text}
     </Link>
