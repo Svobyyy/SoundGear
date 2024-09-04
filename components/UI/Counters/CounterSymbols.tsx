@@ -25,15 +25,13 @@ export default function CounterSymbols({
   quantity,
   setQuantity,
 }: Props) {
-  console.log(symbol, quantity);
-
   return (
     <p
-      className="w-10 cursor-pointer select-none py-[7.5px] text-center leading-none opacity-50 transition-all hover:text-orange hover:opacity-100"
+      className={`w-10 cursor-pointer select-none ${quantity ? "py-[16.5px]" : "py-[8.5px]"} text-center leading-none opacity-50 transition-all hover:text-orange hover:opacity-100`}
       onClick={() => {
         setQuantity
           ? symbol === "+"
-            ? quantity !== undefined && increaseQuantityState(setQuantity, quantity)
+            ? quantity !== undefined && increaseQuantityState(setQuantity)
             : setQuantity && decreaseQuantityState(setQuantity)
           : name && price
             ? onClickFunction(setCart, id, price, name)

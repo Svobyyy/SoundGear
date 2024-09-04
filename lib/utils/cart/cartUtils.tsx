@@ -10,6 +10,38 @@ const removeUnnecessaryName = (name: string) => {
   return words.join(" ");
 };
 
+const addToCart = (
+  setCart: Dispatch<SetStateAction<CartItem[]>>,
+  id: number,
+  price: number,
+  name: string,
+  quantity: number,
+) => {
+  setCart((prevCart) => {
+    const itemExists = prevCart.some((item) => item.id === id);
+
+    if (itemExists) {
+      return prevCart.map((item) => {
+        if (item.id === id) {
+          const newQuantity = Math.min(
+            item.quantity + quantity,
+            MAX_NUMBER_OF_PRODUCTS,
+          );
+          return { ...item, quantity: newQuantity };
+        }
+        return item;
+      });
+    } else {
+      const cleanName = removeUnnecessaryName(name);
+      const addedQuantity = Math.min(quantity, MAX_NUMBER_OF_PRODUCTS);
+      return [
+        ...prevCart,
+        { id, name: cleanName, price, quantity: addedQuantity },
+      ];
+    }
+  });
+};
+
 const increaseQuantity = (
   setCart: Dispatch<SetStateAction<CartItem[]>>,
   id: number,
@@ -55,22 +87,20 @@ const removeAllFromCart = (setCart: Dispatch<SetStateAction<CartItem[]>>) => {
 
 const increaseQuantityState = (
   setQuantity: Dispatch<SetStateAction<number>>,
-  quantity: number,
 ) => {
-  quantity < MAX_NUMBER_OF_PRODUCTS
-    ? setQuantity((number) => number + 1)
-    : setQuantity(() => MAX_NUMBER_OF_PRODUCTS);
+  setQuantity((number) => Math.min(number + 1, MAX_NUMBER_OF_PRODUCTS));
 };
 
 const decreaseQuantityState = (
   setQuantity: Dispatch<SetStateAction<number>>,
 ) => {
-  setQuantity((number) => (number - 1 >= 0 ? number - 1 : number));
+  setQuantity((currentQuantity) => Math.max(currentQuantity - 1, 0));
 };
 
 export {
   increaseQuantityState,
   decreaseQuantityState,
+  addToCart,
   increaseQuantity,
   decreaseQuantity,
   removeAllFromCart,

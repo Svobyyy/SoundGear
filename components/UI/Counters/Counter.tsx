@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from "react";
 import { useCartContext } from "@/contexts/CartContextProvider";
 import { increaseQuantity, decreaseQuantity } from "@/lib/utils/cart/cartUtils";
 import CounterSymbols from "./CounterSymbols";
+import CounterQuantity from "./CounterQuantity";
 
 export default function Counter({
   id,
@@ -18,7 +19,7 @@ export default function Counter({
   const { cart, setCart } = useCartContext();
 
   return (
-    <div className="flex max-h-10 items-center bg-gray">
+    <div className="flex max-h-12 items-center bg-gray">
       <CounterSymbols
         setCart={setCart}
         id={id}
@@ -28,11 +29,7 @@ export default function Counter({
         quantity={quantity}
       />
 
-      <p className="font-bold leading-none select-none">
-        {quantity !== undefined
-          ? quantity
-          : cart.map((item) => item.id === id && item.quantity)}
-      </p>
+      <CounterQuantity quantity={quantity} cart={cart} id={id} />
 
       <CounterSymbols
         setCart={setCart}

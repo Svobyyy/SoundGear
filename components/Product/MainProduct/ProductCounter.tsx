@@ -1,11 +1,13 @@
 "use client";
 
-import Counter from "../UI/Counters/Counter";
-import ButtonOnClick from "../UI/ButtonOnClick";
+import Counter from "../../UI/Counters/Counter";
+import ButtonOnClick from "../../UI/ButtonOnClick";
 import { useState } from "react";
+import { addToCart } from "@/lib/utils/cart/cartUtils";
+import { useCartContext } from "@/contexts/CartContextProvider";
 
 export default function ProductCounter({ id, name, price }: CartCounterProps) {
-  
+  const { setCart } = useCartContext();
   const [quantity, setQuantity] = useState(0);
 
   return (
@@ -19,7 +21,8 @@ export default function ProductCounter({ id, name, price }: CartCounterProps) {
       />
       <ButtonOnClick
         text="ADD TO CART"
-        onClickAction={() => console.log("added to cart")}
+        width
+        onClickAction={() => addToCart(setCart, id, price, name, quantity)}
       />
     </div>
   );

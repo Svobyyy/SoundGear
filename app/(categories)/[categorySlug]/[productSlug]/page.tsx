@@ -1,4 +1,5 @@
-import Product from "@/components/Product/Product";
+import Includes from "@/components/Product/Includes/Includes";
+import Product from "@/components/Product/MainProduct/Product";
 import { getProduct, getProducts } from "@/lib/utils/products/productsUtils";
 import { notFound } from "next/navigation";
 
@@ -11,8 +12,17 @@ export default async function page({
 }: Props) {
   const product: Product = await getProduct("slug", productSlug);
 
-  const { name, isNewProduct, description, price, image, id, category } =
-    product;
+  const {
+    name,
+    isNewProduct,
+    description,
+    price,
+    image,
+    id,
+    category,
+    includes,
+    features,
+  } = product;
   if (category !== categorySlug) notFound();
 
   return (
@@ -25,6 +35,7 @@ export default async function page({
         isNewProduct={isNewProduct}
         id={id}
       />
+      <Includes includes={includes} features={features} />
     </section>
   );
 }
