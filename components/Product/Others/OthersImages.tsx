@@ -23,7 +23,7 @@ export default function OthersImages({
         alt={`${name} image`}
         src={tablet}
         height={636}
-        className="hidden min-h-[300px] object-cover sm:inline-block tab:hidden"
+        className="hidden min-h-[300px] object-cover transition-transform duration-300 group-hover:translate-y-[-5px] sm:inline-block tab:hidden"
       />
 
       <Image
@@ -32,7 +32,7 @@ export default function OthersImages({
         alt={`${name} image`}
         src={mobile}
         height={240}
-        className="inline-block min-h-[120px] object-cover sm:hidden"
+        className="inline-block min-h-[0px] object-cover sm:hidden"
       />
     </>
   );

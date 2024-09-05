@@ -1,5 +1,3 @@
-"use client";
-
 import { Dispatch, SetStateAction } from "react";
 import { useCartContext } from "@/contexts/CartContextProvider";
 import { increaseQuantity, decreaseQuantity } from "@/lib/utils/cart/cartUtils";

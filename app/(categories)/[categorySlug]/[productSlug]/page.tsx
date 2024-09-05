@@ -1,4 +1,3 @@
-import ProductGallery from "@/components/Product/Gallery/ProductGallery";
 import Includes from "@/components/Product/Includes/Includes";
 import Product from "@/components/Product/MainProduct/Product";
 import Others from "@/components/Product/Others/Others";
@@ -37,6 +36,7 @@ export default async function page({
         image={image}
         isNewProduct={isNewProduct}
         id={id}
+        category={categorySlug}
       />
       <Includes includes={includes} features={features} />
       <Others others={others} />

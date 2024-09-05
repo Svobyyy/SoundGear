@@ -13,7 +13,7 @@ export default function Form() {
 
   return (
     <form
-      className={`w-full rounded-lg bg-white p-[31px] text-black tab:max-w-[730px]`}
+      className={`w-full rounded-lg bg-white p-[31px] text-black tab:max-w-[730px] caret-[#D87D4A]`}
     >
       <h3>CHECKOUT</h3>
       <p className="subtitle mb-4 mt-[50px] text-orange">BILLING ADRESS</p>

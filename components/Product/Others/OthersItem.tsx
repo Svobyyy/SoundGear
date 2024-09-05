@@ -8,15 +8,12 @@ export default function OthersItem({
   other: Others;
 }) {
   return (
-    <li className="group w-full transition-colors">
-      <Link
-        href={`/${slug}`}
-        className="group flex flex-col items-center justify-end"
-      >
+    <li className="group flex w-full flex-col items-center justify-end transition-colors">
+      <Link href={`/${slug}`}>
         <OthersImages image={image} name={name} />
-        <h5 className="my-[32px] uppercase sm:mt-10">{name}</h5>
-        <Button text="SEE PRODUCT" navigateTo={slug} maxWidth />
       </Link>
+      <h5 className="my-[32px] uppercase sm:mt-10">{name}</h5>
+      <Button text="SEE PRODUCT" navigateTo={slug} maxWidth />
     </li>
   );
 }
