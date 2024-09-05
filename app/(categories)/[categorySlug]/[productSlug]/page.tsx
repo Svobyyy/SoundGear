@@ -1,6 +1,7 @@
 import ProductGallery from "@/components/Product/Gallery/ProductGallery";
 import Includes from "@/components/Product/Includes/Includes";
 import Product from "@/components/Product/MainProduct/Product";
+import Others from "@/components/Product/Others/Others";
 import { getProduct, getProducts } from "@/lib/utils/products/productsUtils";
 import { notFound } from "next/navigation";
 
@@ -12,7 +13,6 @@ export default async function page({
   params: { productSlug, categorySlug },
 }: Props) {
   const product: Product = await getProduct("slug", productSlug);
-
   const {
     name,
     isNewProduct,
@@ -24,6 +24,7 @@ export default async function page({
     category,
     includes,
     features,
+    others,
   } = product;
   if (category !== categorySlug) notFound();
 
@@ -38,7 +39,8 @@ export default async function page({
         id={id}
       />
       <Includes includes={includes} features={features} />
-      <ProductGallery gallery={gallery} />
+      <Others others={others} />
+      {/* <ProductGallery gallery={gallery} /> */}
     </section>
   );
 }

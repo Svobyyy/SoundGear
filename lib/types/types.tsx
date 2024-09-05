@@ -15,6 +15,12 @@ type ProductGallery = {
   third: ImageSizes;
 };
 
+type Others = {
+  slug: string;
+  name: string;
+  image: ImageSizes;
+};
+
 type Product = {
   id: number;
   slug: string;
@@ -28,7 +34,7 @@ type Product = {
   features: string;
   includes: ProductIncludeItem[];
   gallery: ProductGallery;
-  others: Product[];
+  others: Others[];
 };
 
 type homeProduct = {
