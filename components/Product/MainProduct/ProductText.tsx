@@ -1,21 +1,16 @@
-import { formatter } from "@/lib/utils/products/productsUtils";
+import { formatter, getProduct } from "@/lib/utils/products/productsUtils";
 import ProductCounter from "./ProductCounter";
 
 type Props = {
-  isNewProduct?: boolean;
-  name: string;
-  description?: string;
-  price: number;
-  id: number;
+  slug: string;
 };
 
-export default function ProductText({
-  isNewProduct,
-  name,
-  description,
-  price,
-  id,
-}: Props) {
+export default async function ProductText({ slug }: Props) {
+  const { id, name, price, description, isNewProduct } = await getProduct(
+    "slug",
+    slug,
+  );
+
   return (
     <div className="flex max-w-[572px] flex-col items-start sm:max-w-[445px]">
       {isNewProduct && (

@@ -1,13 +1,16 @@
+import { getProduct } from "@/lib/utils/products/productsUtils";
 import Image from "next/image";
 
 type Props = {
-  name: string;
-  desktop: string;
-  tablet: string;
-  mobile: string;
+  slug: string;
 };
 
-export default function ProductImages({ desktop, tablet, mobile, name }: Props) {
+export default async function ProductImages({ slug }: Props) {
+  const {
+    image: { desktop, tablet, mobile },
+    name,
+  } = await getProduct("slug", slug);
+
   return (
     <>
       <Image
