@@ -1,5 +1,9 @@
 Currently under development 💻
 
+Focus of this Project
+
+Removing unnecessary prop drilling, understanding of Next JS caching
+
 <h3>Features</h3>
 <ul>
   <li>
