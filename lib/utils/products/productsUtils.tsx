@@ -1,20 +1,26 @@
 import ProductsModel from "@/lib/models/productsModel";
 import connectMongo from "../db/connectMongo";
+import { notFound } from "next/navigation";
 
 export const getProducts = async () => {
   await connectMongo();
-  const products = await ProductsModel.find();
+  const products: Product[] = await ProductsModel.find();
+  if (products.length === 0) return notFound();
   return products;
 };
 
 // assign isNewProduct Products to first places, sort other products which arent new by id
 export const getProductsByCategory = async (category: string) => {
   await connectMongo();
-  const products = await ProductsModel.find({ category: `${category}` });
+
+  const products: Product[] = await ProductsModel.find({
+    category: `${category}`,
+  });
+  if (products.length === 0) return notFound();
 
   products.sort((a, b) => {
-    if (a.new !== b.new) {
-      return a.new ? -1 : 1;
+    if (a.isNewProduct !== b.isNewProduct) {
+      return a.isNewProduct ? -1 : 1;
     }
     return b.id - a.id;
   });
@@ -24,7 +30,20 @@ export const getProductsByCategory = async (category: string) => {
 
 export const getProduct = async (filterBy: string, filterValue: string) => {
   await connectMongo();
-  const product = await ProductsModel.findOne({ [filterBy]: filterValue });
+  const product: Product | null = await ProductsModel.findOne({
+    [filterBy]: filterValue,
+  });
+  if (!product) return notFound();
+  return product as Product;
+};
+
+export const isCorrectCategory = async (
+  productSlug: string,
+  categorySlug: string,
+) => {
+  await connectMongo();
+  const product: Product = await getProduct("slug", productSlug);
+  if (product.category !== categorySlug) notFound();
   return product;
 };
 

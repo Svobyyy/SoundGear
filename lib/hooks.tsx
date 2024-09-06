@@ -20,7 +20,7 @@ export const useTotalVat = () => {
 
   const totalVat = useMemo(() => {
     return totalPrice * vatRate;
-  }, [totalPrice]);
+  }, [totalPrice, vatRate]);
 
   return Math.ceil(totalVat);
 };

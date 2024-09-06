@@ -1,8 +1,11 @@
 import Includes from "@/components/Product/Includes/Includes";
 import Product from "@/components/Product/MainProduct/Product";
 import Others from "@/components/Product/Others/Others";
-import { getProduct, getProducts } from "@/lib/utils/products/productsUtils";
-import { notFound } from "next/navigation";
+import {
+  getProduct,
+  getProducts,
+  isCorrectCategory,
+} from "@/lib/utils/products/productsUtils";
 
 type Props = {
   params: { productSlug: string; categorySlug: string };
@@ -11,7 +14,8 @@ type Props = {
 export default async function page({
   params: { productSlug, categorySlug },
 }: Props) {
-  const product: Product = await getProduct("slug", productSlug);
+  const product = await isCorrectCategory(productSlug, categorySlug);
+
   const {
     name,
     isNewProduct,
@@ -25,11 +29,11 @@ export default async function page({
     features,
     others,
   } = product;
-  if (category !== categorySlug) notFound();
 
   return (
     <section className="max my-[64px] flex flex-col gap-[120px] sm:my-[120px] lg:my-40">
       <Product
+        productSlug={productSlug}
         name={name}
         description={description}
         price={price}
@@ -48,8 +52,7 @@ export default async function page({
 export async function generateMetadata({
   params: { productSlug, categorySlug },
 }: Props) {
-  const product: Product = await getProduct("slug", productSlug);
-  if (product.category !== categorySlug) notFound();
+  const product = await isCorrectCategory(productSlug, categorySlug);
 
   return {
     title: product.name,

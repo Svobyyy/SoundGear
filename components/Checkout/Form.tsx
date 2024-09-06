@@ -1,7 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import Input from "./Input";
-import Payment from "./PaymentInput";
-import CashText from "./CashText";
+import Input from "./Form/Input";
+import Payment from "./Form/PaymentInput";
+import CashText from "./Form/CashText";
 
 export default function Form() {
   // const {

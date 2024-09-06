@@ -3,6 +3,7 @@ import ProductImages from "./ProductImages";
 import ProductText from "./ProductText";
 
 type Props = {
+  productSlug: string;
   name: string;
   description: string;
   price: number;
@@ -16,7 +17,7 @@ type Props = {
   isNewProduct?: boolean;
 };
 
-export default function Product({
+export default async function Product({
   name,
   description,
   price,
@@ -25,6 +26,10 @@ export default function Product({
   category,
   image: { mobile, tablet, desktop },
 }: Props) {
+
+  // const product = await isCorrectCategory(productSlug, categorySlug);
+
+
   return (
     <div>
       <Link href={`/${category}`}>

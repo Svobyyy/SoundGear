@@ -1,7 +1,6 @@
-import Button from "@/components/UI/Button";
-
-import TotalCart from "./TotalCart";
-import ProductsSummary from "./ProductsSummary";
+import TotalCart from "./Summary/TotalCart";
+import ProductsSummary from "./Summary/ProductsSummary";
+import Pay from "./Summary/Pay";
 
 export default function Summary() {
   return (
@@ -11,7 +10,7 @@ export default function Summary() {
       <h6>SUMMARY</h6>
       <ProductsSummary />
       <TotalCart />
-      <Button text="checkout" navigateTo="checkout" />
+      <Pay />
     </section>
   );
 }
