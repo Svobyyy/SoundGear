@@ -6,7 +6,7 @@ export default function ProductsCart() {
 
   return (
     <ul className="flex flex-col gap-6 py-8">
-      {cart.map(({ name, id, price }): JSX.Element => {
+      {cart.map(({ name, id, price }) => {
         return <Product key={id} name={name} id={id} price={price} />;
       })}
     </ul>

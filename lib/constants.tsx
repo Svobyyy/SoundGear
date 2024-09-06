@@ -7,6 +7,9 @@ export const REMOVE_FROM_NAME = [
   "Speaker",
 ];
 
+export const SHIPPING_COST = 50;
+export const VAT_RATE = 20;
+
 // HomePage Products
 
 export const primaryHomeBox = {

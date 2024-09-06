@@ -3,7 +3,8 @@ import Button from "../../UI/ButtonOnClick";
 import { Dispatch, SetStateAction } from "react";
 import ProductsCart from "./ProductsCart";
 import HeaderCart from "./HeaderCart";
-import TotalCart from "./TotalCart";
+import { useTotalPrice } from "@/lib/hooks";
+import TotalText from "@/components/UI/TotalText/TotalText";
 
 type Props = {
   setCartState: Dispatch<SetStateAction<boolean>>;
@@ -27,7 +28,7 @@ export default function MainBody({ setCartState, CartState }: Props) {
 
       <ProductsCart />
 
-      <TotalCart />
+      <TotalText name="TOTAL" price={useTotalPrice()} space />
 
       <Button text="checkout" onClickAction={() => cartSwitch(setCartState)} />
     </section>

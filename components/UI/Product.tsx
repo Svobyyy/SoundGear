@@ -7,10 +7,15 @@ const formatter = new Intl.NumberFormat("en-US", {
   minimumFractionDigits: 0,
 });
 
-export default function Product({ name, price, id }: CartCounterProps) {
+export default function Product({
+  name,
+  price,
+  id,
+  quantity,
+}: CartCounterProps & { quantity?: number }) {
   return (
     <li className="flex flex-wrap items-center justify-between gap-3">
-      <div className="flex items-center gap-4 flex-1">
+      <div className="flex flex-1 items-center gap-4">
         <Image
           width={64}
           height={64}
@@ -24,7 +29,11 @@ export default function Product({ name, price, id }: CartCounterProps) {
           <p className="font-bold opacity-50">{formatter.format(price)}</p>
         </div>
       </div>
-      <Counter id={id} name={name} price={price} />
+      {quantity !== undefined ? (
+        <p>x{quantity}</p>
+      ) : (
+        <Counter id={id} name={name} price={price} />
+      )}
     </li>
   );
 }
