@@ -12,7 +12,7 @@ type Props = {
 export default function Header({ background, category }: Props) {
   return (
     <header
-      className={`sm:paddings relative flex flex-col items-center ${
+      className={`sm:paddings relative flex w-full flex-col items-center ${
         background
           ? "mb-10 h-[600px] items-start bg-[url('/home/mobile/image-header.jpg')] bg-cover bg-center mob:h-[729px] mob:bg-[url('/home/tablet/image-header.jpg')] sm:mb-[96px] tab:mb-[120px] tab:bg-[url('/home/desktop/image-hero.jpg')] 2xl:bg-contain"
           : "bg-black"

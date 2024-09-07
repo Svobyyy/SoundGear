@@ -1,5 +1,6 @@
 import { formatter, getProduct } from "@/lib/utils/products/productsUtils";
 import ProductCounter from "./ProductCounter";
+import NewProduct from "./ProductText/NewProduct";
 
 type Props = {
   slug: string;
@@ -13,11 +14,7 @@ export default async function ProductText({ slug }: Props) {
 
   return (
     <div className="flex max-w-[572px] flex-col items-start sm:max-w-[445px]">
-      {isNewProduct && (
-        <p className="mb-6 text-[14px] tracking-[10px] text-orange sm:mb-4">
-          NEW PRODUCT
-        </p>
-      )}
+      {isNewProduct && <NewProduct />}
       <h2 className="max-w-[200px] sm:max-w-[400px] sm:text-[28px] maintab:text-[40px]">
         {name}
       </h2>

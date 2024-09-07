@@ -49,4 +49,8 @@
   .max {
     @apply paddings mx-auto box-content max-w-[1110px];
   }
+
+  .heightHighRes {
+    @apply min-h-[calc(100vh-466px)];
+  }
 }

@@ -1,6 +1,12 @@
+import { getProduct } from "@/lib/utils/products/productsUtils";
 import OthersItem from "./OthersItem";
 
-export default function Others({ others }: { others: Others[] }) {
+type Props = {
+  productSlug: string;
+};
+
+export default async function Others({ productSlug }: Props) {
+  const { others } = await getProduct("slug", productSlug);
   return (
     <section>
       <h3 className="text-center text-[24px] tracking-[0.86px] sm:text-[32px] sm:tracking-[1.15px]">

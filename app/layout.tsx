@@ -8,7 +8,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SoundGear",
   description:
-    "Selling Headphones, Speakers, Earphones and relatable things to audio equipment",
+    "Selling headphones, speakers, earphones, and related audio equipment.",
 };
 
 export default function RootLayout({
