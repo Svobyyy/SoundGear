@@ -1,8 +1,11 @@
 import Product from "@/components/UI/Product";
 import { useCartContext } from "@/contexts/CartContextProvider";
+import { useLocalStorage } from "@/lib/useLocalStorage";
 
 export default function ProductsCart() {
   const { cart } = useCartContext();
+
+  useLocalStorage();
 
   return (
     <ul className="flex flex-col gap-6 py-8">

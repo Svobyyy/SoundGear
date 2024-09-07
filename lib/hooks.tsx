@@ -11,27 +11,57 @@ export const useTotalPrice = () => {
     }, 0);
   }, [cart]);
 
-  return totalPrice;
-};
-
-export const useTotalVat = () => {
-  const totalPrice = useTotalPrice();
   const vatRate = VAT_RATE / 100;
 
   const totalVat = useMemo(() => {
     return totalPrice * vatRate;
   }, [totalPrice, vatRate]);
 
-  return Math.ceil(totalVat);
-};
-
-export const useTotalGrand = () => {
-  const totalPrice = useTotalPrice();
-  const totalVat = useTotalVat();
-
   const totalGrand = useMemo(() => {
     return totalPrice + totalVat + SHIPPING_COST;
   }, [totalPrice, totalVat]);
 
-  return totalGrand;
+  return [Math.ceil(totalPrice), Math.ceil(totalVat), Math.ceil(totalGrand)];
 };
+
+// export const useTotalVat = () => {
+//   const totalPrice = useTotalPrice();
+//
+
+//   const totalVat = useMemo(() => {
+//     return totalPrice * vatRate;
+//   }, [totalPrice, vatRate]);
+
+//   return Math.ceil(totalVat);
+// };
+
+// export const useTotalGrand = () => {
+//   const totalPrice = useTotalPrice();
+//   const totalVat = useTotalVat();
+
+//   return totalGrand;
+// };
+
+// export const useLoadLocalStorageCart = () => {
+
+//   useEffect(() => {
+//     const localCart = localStorage.getItem("cart");
+//     const parsedCart = localCart ? JSON.parse(localCart) : [];
+
+//     return setCart(parsedCart);
+//   }, []);
+// };
+
+// export const useAddLocalStorageCart = () => {
+//   const { cart } = useCartContext();
+
+//   useEffect(() => {
+//     localStorage.setItem("cart", JSON.stringify(cart));
+//   }, [cart]);
+// };
+
+// export const removeAllLocalStorageCart = () => {
+//   useEffect(() => {
+//     localStorage.removeItem("cart");
+//   }, []);
+// };

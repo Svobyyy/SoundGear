@@ -18,18 +18,18 @@ const addToCart = (
   quantity: number,
 ) => {
   setCart((prevCart) => {
-    const itemExists = prevCart.some((item) => item.id === id);
+    const prodExists = prevCart.some((product) => product.id === id);
 
-    if (itemExists) {
-      return prevCart.map((item) => {
-        if (item.id === id) {
+    if (prodExists) {
+      return prevCart.map((product) => {
+        if (product.id === id) {
           const newQuantity = Math.min(
-            item.quantity + quantity,
+            product.quantity + quantity,
             MAX_NUMBER_OF_PRODUCTS,
           );
-          return { ...item, quantity: newQuantity };
+          return { ...product, quantity: newQuantity };
         }
-        return item;
+        return product;
       });
     } else {
       const cleanName = removeUnnecessaryName(name);
@@ -49,13 +49,13 @@ const increaseQuantity = (
   name: string,
 ) => {
   setCart((prevCart) => {
-    const itemExists = prevCart.some((item) => item.id === id);
+    const prodExists = prevCart.some((product) => product.id === id);
 
-    if (itemExists) {
-      return prevCart.map((item) =>
-        item.id === id && item.quantity < MAX_NUMBER_OF_PRODUCTS
-          ? { ...item, quantity: item.quantity + 1 }
-          : item,
+    if (prodExists) {
+      return prevCart.map((product) =>
+        product.id === id && product.quantity < MAX_NUMBER_OF_PRODUCTS
+          ? { ...product, quantity: product.quantity + 1 }
+          : product,
       );
     } else {
       const cleanName = removeUnnecessaryName(name);
@@ -70,8 +70,10 @@ const decreaseQuantity = (
 ) => {
   setCart((prevCart) => {
     const updatedCart = prevCart
-      .map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity - 1 } : item,
+      .map((product) =>
+        product.id === id
+          ? { ...product, quantity: product.quantity - 1 }
+          : product,
       )
       .filter((item) => item.quantity > 0);
 
@@ -83,7 +85,7 @@ const removeAllFromCart = (setCart: Dispatch<SetStateAction<CartItem[]>>) => {
   setCart([]);
 };
 
-// adding or decreasing state of Product's quantity to "ADD TO CART"
+// Increasing or Decreasing state of Product's quantity to "ADD TO CART"
 
 const increaseQuantityState = (
   setQuantity: Dispatch<SetStateAction<number>>,
