@@ -15,7 +15,9 @@ export default function Product({
 }: CartCounterProps & { quantity?: number }) {
   return (
     <li className="flex flex-wrap items-center justify-between gap-3">
-      <div className="flex flex-1 items-center gap-4">
+      <div
+        className={`flex flex-1 gap-4 ${!quantity ? "flex-col items-start mob:flex-row mob:items-center" : "items-center"}`}
+      >
         <Image
           width={64}
           height={64}

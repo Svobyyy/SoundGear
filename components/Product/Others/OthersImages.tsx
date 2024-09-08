@@ -32,7 +32,7 @@ export default function OthersImages({
         alt={`${name} image`}
         src={mobile}
         height={240}
-        className="inline-block min-h-[0px] object-cover sm:hidden"
+        className="inline-block min-h-[120px] object-cover sm:hidden"
       />
     </>
   );

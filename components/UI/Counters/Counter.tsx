@@ -17,7 +17,7 @@ export default function Counter({
   const { cart, setCart } = useCartContext();
 
   return (
-    <div className="flex max-h-12 items-center bg-gray">
+    <div className="flex max-h-12 max-w-[120px] items-center bg-gray">
       <CounterSymbols
         setCart={setCart}
         id={id}

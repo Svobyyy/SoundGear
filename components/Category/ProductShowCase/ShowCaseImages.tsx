@@ -8,9 +8,10 @@ type Props = {
 
 export default async function ShowCaseImages({ slug }: Props) {
   const {
-    image: { desktop, tablet, mobile },
+    categoryImage: { desktop, tablet, mobile },
     name,
   } = await getProduct("slug", slug);
+
   return (
     <>
       <Image
@@ -26,7 +27,7 @@ export default async function ShowCaseImages({ slug }: Props) {
         height={704}
         alt={`${name} image`}
         quality={100}
-        className="hidden min-h-[400px] rounded-lg object-cover sm:inline-block lg:hidden"
+        className="hidden min-h-[400px] rounded-lg sm:inline-block lg:hidden object-cover"
         src={tablet}
       />
       <Image

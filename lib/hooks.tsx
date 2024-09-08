@@ -15,32 +15,15 @@ export const useTotalPrice = () => {
 
   const totalVat = useMemo(() => {
     return totalPrice * vatRate;
-  }, [totalPrice, vatRate]);
+  }, [totalPrice]);
 
   const totalGrand = useMemo(() => {
     return totalPrice + totalVat + SHIPPING_COST;
-  }, [totalPrice, totalVat]);
+  }, [totalVat]);
 
   return [Math.ceil(totalPrice), Math.ceil(totalVat), Math.ceil(totalGrand)];
 };
 
-// export const useTotalVat = () => {
-//   const totalPrice = useTotalPrice();
-//
-
-//   const totalVat = useMemo(() => {
-//     return totalPrice * vatRate;
-//   }, [totalPrice, vatRate]);
-
-//   return Math.ceil(totalVat);
-// };
-
-// export const useTotalGrand = () => {
-//   const totalPrice = useTotalPrice();
-//   const totalVat = useTotalVat();
-
-//   return totalGrand;
-// };
 
 // export const useLoadLocalStorageCart = () => {
 

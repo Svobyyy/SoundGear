@@ -9,7 +9,7 @@ export const getProducts = async () => {
   return products;
 };
 
-// assign isNewProduct Products to first places, sort other products which arent new by id
+// new products to first places and sort the rest by id
 export const getProductsByCategory = async (category: string) => {
   await connectMongo();
 
