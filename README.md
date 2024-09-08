@@ -1,8 +1,11 @@
 Currently under development 💻
 
-Focus of this Project
-
-Removing unnecessary prop drilling, understanding of Next JS caching
+<h3>Focus of this Project</h3>
+<ul>
+  <li><strong>Best Practices</strong></li>
+  <li><strong>Next.js</strong>: Static and Client-Side Rendering</li>
+  <li><strong>React Hooks</strong>: Utilizing hooks like <code>useMemo</code>, <code>useCallback</code>, and <code>memo</code></li>
+</ul>
 
 <h3>Features</h3>
 <ul>
