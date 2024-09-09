@@ -11,8 +11,8 @@ export default async function ProductGallery({ productSlug }: Props) {
   } = await getProduct("slug", productSlug);
 
   return (
-    <section className="flex flex-col items-center justify-center gap-x-[30px] gap-y-[32px] sm:flex-row">
-      <div className="flex w-full flex-col gap-y-[32px] sm:max-w-[445px]">
+    <section className="flex flex-col gap-x-[18px] gap-y-[20px] overflow-hidden sm:flex-row lg:gap-x-[30px] lg:gap-y-[32px]">
+      <div className="flex flex-col gap-y-[32px]">
         <Image
           src={first.mobile}
           alt={"gallery photo"}
@@ -20,6 +20,14 @@ export default async function ProductGallery({ productSlug }: Props) {
           height={348}
           quality={100}
           className="inline-block min-h-[174px] rounded-lg object-cover sm:hidden"
+        />
+        <Image
+          src={first.tablet}
+          alt={"gallery photo"}
+          width={554}
+          height={348}
+          quality={100}
+          className="hidden flex-1 rounded-lg object-cover sm:inline-block lg:hidden"
         />
 
         <Image
@@ -30,6 +38,14 @@ export default async function ProductGallery({ productSlug }: Props) {
           quality={100}
           className="inline-block min-h-[174px] rounded-lg object-cover sm:hidden"
         />
+        <Image
+          src={second.tablet}
+          alt={"gallery photo"}
+          width={554}
+          height={348}
+          quality={100}
+          className="hidden flex-1 rounded-lg object-cover sm:inline-block lg:hidden"
+        />
       </div>
 
       <Image
@@ -39,6 +55,15 @@ export default async function ProductGallery({ productSlug }: Props) {
         height={736}
         quality={100}
         className="inline-block min-h-[368px] w-full max-w-[635px] rounded-lg object-cover sm:hidden"
+      />
+
+      <Image
+        src={third.tablet}
+        alt={"gallery photo"}
+        width={790}
+        height={736}
+        quality={100}
+        className="hidden min-h-[368px] max-w-[60%] rounded-lg object-cover sm:inline-block lg:hidden"
       />
     </section>
   );
