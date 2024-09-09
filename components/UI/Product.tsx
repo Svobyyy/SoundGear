@@ -1,36 +1,14 @@
-import Image from "next/image";
 import Counter from "./Counters/Counter";
+import ProductInfo from "./Product/ProductInfo";
 
-const formatter = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  minimumFractionDigits: 0,
-});
+type Props = CartCounterProps & { quantity?: number };
 
-export default function Product({
-  name,
-  price,
-  id,
-  quantity,
-}: CartCounterProps & { quantity?: number }) {
+export default function Product({ name, price, id, quantity }: Props) {
   return (
-    <li className="flex flex-wrap items-center justify-between gap-3">
-      <div
-        className={`flex flex-1 gap-4 ${!quantity ? "flex-col items-start mob:flex-row mob:items-center" : "items-center"}`}
-      >
-        <Image
-          width={64}
-          height={64}
-          alt={`${name} cart`}
-          quality={100}
-          className="rounded-lg"
-          src={`/cart/${id}.jpg`}
-        />
-        <div>
-          <p className="font-bold">{name}</p>
-          <p className="font-bold opacity-50">{formatter.format(price)}</p>
-        </div>
-      </div>
+    <li
+      className={`flex flex-wrap ${!quantity ? "items-start mob:items-center" : "items-center"} justify-between gap-3`}
+    >
+      <ProductInfo id={id} name={name} quantity={quantity} price={price} />
       {quantity !== undefined ? (
         <p>x{quantity}</p>
       ) : (

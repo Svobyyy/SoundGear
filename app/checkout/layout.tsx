@@ -1,10 +1,8 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import { Metadata } from "next";
+import { checkoutMetaData } from "@/meta/checkoutMetaData";
 
-export const metadata: Metadata = {
-  title: "Checkout",
-};
+export const metadata = checkoutMetaData;
 
 export default function RootLayout({
   children,

@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/constants";
 import { Metadata } from "next";
 
 export const mainMetaData: Metadata = {
@@ -12,7 +13,7 @@ export const mainMetaData: Metadata = {
     description:
       "Explore our range of high-quality audio products including headphones, speakers, and earphones.",
     type: "website",
-    url: "https://yourwebsite.com",
+    url: SITE_URL,
     siteName: "SoundGear",
   },
 };

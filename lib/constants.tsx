@@ -1,5 +1,7 @@
 export const MAX_NUMBER_OF_PRODUCTS = 9;
 
+export const SITE_URL = "https://soundgear.matejsvobs.com";
+
 export const REMOVE_FROM_NAME = [
   "Wireless",
   "Earphones",
