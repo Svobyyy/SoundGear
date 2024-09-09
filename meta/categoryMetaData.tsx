@@ -1,5 +1,5 @@
 import { SITE_URL } from "@/lib/constants";
-import { capitalizeFirstLetter } from "@/lib/utils/text/textUtils";
+import { capitalizeFirstLetter } from "@/lib/utils/utils";
 
 export default function categoryMetaData(categorySlug: string) {
   const capitalizedCategory = capitalizeFirstLetter(categorySlug);

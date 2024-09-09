@@ -1,4 +1,4 @@
-import { checkNewLinesFeatures } from "@/lib/utils/text/textUtils";
+import { checkNewLinesFeatures } from "@/lib/utils/utils";
 import React from "react";
 
 type Props = {

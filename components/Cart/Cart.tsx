@@ -10,14 +10,14 @@ const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
 };
 
 export default function Cart() {
-  const [CartState, setCartState] = useState(false);
+  const [cartState, setCartState] = useState(false);
   return (
     <>
       <CartIcon onClick={() => cartSwitch(setCartState)} />
 
-      <MainBody setCartState={setCartState} CartState={CartState} />
+      <MainBody setCartState={setCartState} cartState={cartState} />
 
-      <BackgroundOverlay showSwitch={CartState} />
+      <BackgroundOverlay showSwitch={cartState} />
     </>
   );
 }

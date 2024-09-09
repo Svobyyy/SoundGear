@@ -1,7 +1,7 @@
 import Categories from "@/components/UI/CategoriesBoxes/Categories";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import ProductBoxes from "@/components/Home/ProductBoxes/ProductBoxes";
+import ProductBoxes from "@/components/Home/ProductBoxes";
 
 export default function Home() {
   return (

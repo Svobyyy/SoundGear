@@ -11,31 +11,35 @@ export default async function ProductGallery({ productSlug }: Props) {
   } = await getProduct("slug", productSlug);
 
   return (
-    <div className="grid grid-cols-[minmax(280px,445px)_minmax(380px,635px)] gap-x-[30px] gap-y-[32px]">
+    <section className="flex flex-col items-center justify-center gap-x-[30px] gap-y-[32px] sm:flex-row">
+      <div className="flex w-full flex-col gap-y-[32px] sm:max-w-[445px]">
+        <Image
+          src={first.mobile}
+          alt={"gallery photo"}
+          width={654}
+          height={348}
+          quality={100}
+          className="inline-block min-h-[174px] rounded-lg object-cover sm:hidden"
+        />
+
+        <Image
+          src={second.mobile}
+          alt={"gallery photo"}
+          width={654}
+          height={348}
+          quality={100}
+          className="inline-block min-h-[174px] rounded-lg object-cover sm:hidden"
+        />
+      </div>
+
       <Image
-        src={first.desktop}
+        src={third.mobile}
         alt={"gallery photo"}
-        width={445}
-        height={280}
+        width={654}
+        height={736}
         quality={100}
-        className="col-start-1 row-start-1 h-full object-cover"
+        className="inline-block min-h-[368px] w-full max-w-[635px] rounded-lg object-cover sm:hidden"
       />
-      <Image
-        src={second.desktop}
-        alt={"gallery photo"}
-        width={445}
-        height={280}
-        quality={100}
-        className="col-start-1 row-start-2 h-full object-cover"
-      />
-      <Image
-        src={third.desktop}
-        alt={"gallery photo"}
-        width={635}
-        height={592}
-        quality={100}
-        className="col-start-2 row-span-2 h-full object-cover"
-      />
-    </div>
+    </section>
   );
 }

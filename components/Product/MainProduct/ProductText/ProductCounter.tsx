@@ -1,10 +1,10 @@
 "use client";
 
-import Counter from "../../UI/Counters/Counter";
-import ButtonOnClick from "../../UI/ButtonOnClick";
 import { useState } from "react";
 import { addToCart } from "@/lib/utils/cart/cartUtils";
 import { useCartContext } from "@/contexts/CartContextProvider";
+import Counter from "@/components/UI/Counters/Counter";
+import ButtonOnClick from "@/components/UI/ButtonOnClick";
 
 export default function ProductCounter({ id, name, price }: CartCounterProps) {
   const { setCart } = useCartContext();

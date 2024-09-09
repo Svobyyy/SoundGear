@@ -14,3 +14,7 @@ export const checkNewLinesFeatures = (features: string) => {
 export const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
+
+export const setVisibility = (show: boolean) => {
+  return show ? "visible" : "invisible opacity-0";
+};
