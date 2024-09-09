@@ -15,7 +15,7 @@ const assignBoxStyle = (
     : `${!smallBoxes ? "h-[320px]" : "h-[200px] tab:flex-1 tab:h-[320px]"} items-center justify-start bg-gray`;
 };
 
-// only the primaryBox has a description
+// only the primaryBox has a description, which changes the height of the box
 
 export default function ProductBox({
   info: { name, description, image, slug, category },

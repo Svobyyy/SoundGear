@@ -1,4 +1,4 @@
-// Wrapper for a higher resolutions of the screen
+// Wrapper component for higher resolution screens
 
 export default function Wrapper({
   children,

@@ -23,27 +23,3 @@ export const useTotalPrice = () => {
 
   return [Math.ceil(totalPrice), Math.ceil(totalVat), Math.ceil(totalGrand)];
 };
-
-// export const useLoadLocalStorageCart = () => {
-
-//   useEffect(() => {
-//     const localCart = localStorage.getItem("cart");
-//     const parsedCart = localCart ? JSON.parse(localCart) : [];
-
-//     return setCart(parsedCart);
-//   }, []);
-// };
-
-// export const useAddLocalStorageCart = () => {
-//   const { cart } = useCartContext();
-
-//   useEffect(() => {
-//     localStorage.setItem("cart", JSON.stringify(cart));
-//   }, [cart]);
-// };
-
-// export const removeAllLocalStorageCart = () => {
-//   useEffect(() => {
-//     localStorage.removeItem("cart");
-//   }, []);
-// };

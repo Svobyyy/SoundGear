@@ -4,7 +4,7 @@ import {
   secondaryHomeBox,
   tertiaryHomeBox,
 } from "@/lib/constants";
-import ProductBox from "./ProductBox";
+import ProductBox from "./ProductBox/ProductBox";
 
 export default function ProductBoxes() {
   return (

@@ -1,7 +1,6 @@
 import Categories from "../UI/CategoriesBoxes/Categories";
-import BestAudio from "./BestAudio";
-import FooterInfo from "./FooterInfo";
-
+import BestAudio from "./BestAudio/BestAudio";
+import FooterInfo from "./FooterMain/FooterInfo";
 type Props = {
   categories?: boolean;
   bestaudio?: boolean;

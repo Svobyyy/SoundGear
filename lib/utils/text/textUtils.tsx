@@ -1,4 +1,4 @@
-// makes a new line for each feature where the new line is a \n character in provided data
+// makes a new line for each feature, the new line is a \n character in provided data
 
 export const checkNewLinesFeatures = (features: string) => {
   return features

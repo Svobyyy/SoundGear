@@ -4,8 +4,8 @@ type Props = {
   text: string;
   navigateTo: string;
   maxWidth?: boolean;
-  black?: boolean;
-  trans?: boolean;
+  black?: boolean; // Determines if the button should be styled as black
+  trans?: boolean; // Determines if the button should be styled as black
 };
 
 const styleOfButton = (
@@ -33,7 +33,7 @@ export default function Button({
   return (
     <Link
       href={`/${navigateTo}`}
-      className={`${styleOfButton(trans, black)} subtitle z-[2] inline-block w-full py-[17.5px] text-center uppercase leading-none transition-colors ${maxWidth && "max-w-[168px]"}`}
+      className={`${styleOfButton(trans, black)} subtitle z-[2] inline-block w-full py-[17.5px] text-center uppercase leading-none transition-colors ${maxWidth ? "max-w-[168px]" : "w-full"}`}
     >
       {text}
     </Link>

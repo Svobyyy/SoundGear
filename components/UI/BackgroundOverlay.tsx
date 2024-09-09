@@ -10,7 +10,7 @@ const showOverlay = (switcher: boolean) => {
 export default function BackgroundOverlay({ showSwitch, isMenu }: Props) {
   return (
     <div
-      className={`min-w-screen fixed bottom-0 left-0 right-0 top-0 ${isMenu ? "z-[10]" : "z-[30]"} inline-block min-h-screen bg-black ${isMenu && "tab:hidden"} ${showOverlay(showSwitch)} transition-all`}
+      className={`min-w-screen fixed bottom-0 left-0 right-0 top-0 ${isMenu ? "z-[10] tab:hidden" : "z-[30]"} inline-block min-h-screen bg-black ${showOverlay(showSwitch)} transition-all`}
     />
   );
 }

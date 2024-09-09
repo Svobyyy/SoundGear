@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "../UI/Button";
 
-export default function NotFoundComp() {
+export default function NotFoundUI() {
   return (
     <div className="margins paddings my-[120px] flex flex-col items-center justify-center gap-5 rounded-lg bg-gray py-10 text-center">
       <h4 className="leading-[60px]">

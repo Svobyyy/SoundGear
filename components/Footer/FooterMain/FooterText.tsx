@@ -1,5 +1,5 @@
+import SocialLink from "@/components/UI/SocialLink";
 import React from "react";
-import SocialLink from "../UI/SocialLink";
 
 export default function FooterText() {
   return (

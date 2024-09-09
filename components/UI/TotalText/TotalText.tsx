@@ -4,7 +4,7 @@ type Props = {
   name: string;
   price: number;
   orange?: boolean;
-  space?: boolean;
+  space?: boolean; // space adds additional space between the components for the Form/Summary component
 };
 
 export default function TotalText({ name, price, orange, space }: Props) {

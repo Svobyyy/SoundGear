@@ -1,4 +1,4 @@
-import SocialLink from "../UI/SocialLink";
+import SocialLink from "../../UI/SocialLink";
 
 export default function FooterCopyright() {
   return (

@@ -1,6 +1,7 @@
 import { formatter, getProduct } from "@/lib/utils/products/productsUtils";
+
+import NewProduct from "./NewProduct";
 import ProductCounter from "./ProductCounter";
-import NewProduct from "./ProductText/NewProduct";
 
 type Props = {
   slug: string;

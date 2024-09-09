@@ -1,6 +1,6 @@
+import NavigationLink from "@/components/UI/NavigationLink";
 import Link from "next/link";
 import React from "react";
-import NavigationLink from "../UI/NavigationLink";
 
 export default function FooterNavigation() {
   return (

@@ -36,7 +36,7 @@ export default function ImageBoxes({
       {desktop && (
         <Image
           quality={100}
-          alt={`${name || quaternaryHomeBox.name} photo`} // box without a text
+          alt={`${name || quaternaryHomeBox.name} photo`} // alt text for the productBox without any text
           width={desktop?.width}
           height={desktop?.height}
           className={`${primary ? primaryBoxStyle : "bottom-0 left-0 hidden h-full object-cover maintab:inline-block"} absolute`}
