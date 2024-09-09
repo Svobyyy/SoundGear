@@ -1,13 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import Button from "../UI/Button";
 
 export default function NotFoundComp() {
   return (
-    <div className="my-[120px] margins flex justify-center items-center flex-col gap-5 text-center bg-gray rounded-lg paddings py-10">
+    <div className="margins paddings my-[120px] flex flex-col items-center justify-center gap-5 rounded-lg bg-gray py-10 text-center">
       <h4 className="leading-[60px]">
         Something Went wrong. <br />
-        We're unable to load this page.
+        We&#39;re unable to load this page.
       </h4>
       <p></p>
       <Image

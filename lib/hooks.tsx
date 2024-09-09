@@ -2,6 +2,8 @@ import { useCartContext } from "@/contexts/CartContextProvider";
 import { useMemo } from "react";
 import { SHIPPING_COST, VAT_RATE } from "./constants";
 
+const vatRate = VAT_RATE / 100;
+
 export const useTotalPrice = () => {
   const { cart } = useCartContext();
 
@@ -11,19 +13,16 @@ export const useTotalPrice = () => {
     }, 0);
   }, [cart]);
 
-  const vatRate = VAT_RATE / 100;
-
   const totalVat = useMemo(() => {
     return totalPrice * vatRate;
   }, [totalPrice]);
 
   const totalGrand = useMemo(() => {
     return totalPrice + totalVat + SHIPPING_COST;
-  }, [totalVat]);
+  }, [totalVat, totalPrice]);
 
   return [Math.ceil(totalPrice), Math.ceil(totalVat), Math.ceil(totalGrand)];
 };
-
 
 // export const useLoadLocalStorageCart = () => {
 

@@ -17,7 +17,7 @@ export const useLocalStorage = () => {
     } finally {
       setLoaded(true);
     }
-  }, []);
+  }, [setCart]);
 
   useEffect(() => {
     if (loaded) {

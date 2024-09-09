@@ -29,8 +29,9 @@ export async function generateMetadata({
 
   return {
     title: product.name,
+    description: product.description,
     openGraph: {
-      title: `${product.name} | SoundGear`,
+      title: `SoundGear: ${product.name}`,
       description: product.description,
     },
   };

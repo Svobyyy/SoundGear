@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import CartContextProvider from "@/contexts/CartContextProvider";
+import { mainMetaData } from "../meta/mainMetaData";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "SoundGear",
-  description:
-    "Selling headphones, speakers, earphones, and related audio equipment.",
-};
+export const metadata = mainMetaData;
 
 export default function RootLayout({
   children,
