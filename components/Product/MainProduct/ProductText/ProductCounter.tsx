@@ -11,7 +11,7 @@ export default function ProductCounter({ id, name, price }: CartCounterProps) {
   const [quantity, setQuantity] = useState(0);
 
   return (
-    <div className="flex flex-col gap-4 mob:flex-row">
+    <div className="flex flex-wrap gap-4">
       <Counter
         id={id}
         name={name}

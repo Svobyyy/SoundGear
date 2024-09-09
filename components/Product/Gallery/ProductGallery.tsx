@@ -12,7 +12,7 @@ export default async function ProductGallery({ productSlug }: Props) {
 
   return (
     <section className="flex flex-col gap-x-[18px] gap-y-[20px] overflow-hidden sm:flex-row lg:gap-x-[30px] lg:gap-y-[32px]">
-      <div className="flex flex-col gap-y-[32px]">
+      <div className="flex flex-col gap-y-[20px] lg:gap-y-[32px]">
         <Image
           src={first.mobile}
           alt={"gallery photo"}
@@ -31,6 +31,15 @@ export default async function ProductGallery({ productSlug }: Props) {
         />
 
         <Image
+          src={first.desktop}
+          alt={"gallery photo"}
+          width={445}
+          height={280}
+          quality={100}
+          className="hidden flex-1 rounded-lg object-cover lg:inline-block"
+        />
+
+        <Image
           src={second.mobile}
           alt={"gallery photo"}
           width={654}
@@ -45,6 +54,15 @@ export default async function ProductGallery({ productSlug }: Props) {
           height={348}
           quality={100}
           className="hidden flex-1 rounded-lg object-cover sm:inline-block lg:hidden"
+        />
+
+        <Image
+          src={second.desktop}
+          alt={"gallery photo"}
+          width={445}
+          height={280}
+          quality={100}
+          className="hidden flex-1 rounded-lg object-cover lg:inline-block"
         />
       </div>
 
@@ -64,6 +82,15 @@ export default async function ProductGallery({ productSlug }: Props) {
         height={736}
         quality={100}
         className="hidden min-h-[368px] max-w-[60%] rounded-lg object-cover sm:inline-block lg:hidden"
+      />
+
+      <Image
+        src={third.desktop}
+        alt={"gallery photo"}
+        width={635}
+        height={592}
+        quality={100}
+        className="hidden max-w-[57.5%] rounded-lg object-cover lg:inline-block"
       />
     </section>
   );
