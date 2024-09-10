@@ -1,11 +1,11 @@
 "use client";
 
-import { useTotalPrice } from "@/lib/hooks";
+import { useTotalPrice } from "@/lib/useTotalPrice";
 import TotalText from "../../UI/TotalText/TotalText";
 import { SHIPPING_COST } from "@/lib/constants";
 
 export default function TotalCart() {
-  const [totalPrice, totalVat, totalGrand] = useTotalPrice();
+  const { totalPrice, totalVat, totalGrand } = useTotalPrice();
 
   return (
     <>

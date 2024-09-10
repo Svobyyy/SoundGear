@@ -3,9 +3,9 @@ import Button from "../../UI/ButtonOnClick";
 import { Dispatch, SetStateAction } from "react";
 import ProductsCart from "./ProductsCart";
 import HeaderCart from "./HeaderCart";
-import { useTotalPrice } from "@/lib/hooks";
 import TotalText from "@/components/UI/TotalText/TotalText";
 import { setVisibility } from "@/lib/utils/utils";
+import { useTotalPrice } from "@/lib/useTotalPrice";
 
 type Props = {
   setCartState: Dispatch<SetStateAction<boolean>>;
@@ -17,7 +17,7 @@ const cartSwitch = (setCartState: Dispatch<SetStateAction<boolean>>) => {
 };
 
 export default function MainBody({ setCartState, cartState }: Props) {
-  const [totalPrice] = useTotalPrice();
+  const { totalPrice } = useTotalPrice();
 
   return (
     <section
@@ -29,7 +29,11 @@ export default function MainBody({ setCartState, cartState }: Props) {
 
       <TotalText name="TOTAL" price={totalPrice} space />
 
-      <Button text="checkout" onClickAction={() => cartSwitch(setCartState)} />
+      <Button
+        text="checkout"
+        onClickAction={() => cartSwitch(setCartState)}
+        href="checkout"
+      />
     </section>
   );
 }

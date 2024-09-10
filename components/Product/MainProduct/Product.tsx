@@ -1,7 +1,6 @@
 import ProductImages from "./ProductImages";
 import ProductText from "./ProductText/ProductText";
 import ProductGoBack from "./ProductGoBack";
-import NavigationLink from "@/components/UI/NavigationLink";
 
 type Props = {
   productSlug: string;

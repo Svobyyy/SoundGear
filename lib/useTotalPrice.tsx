@@ -9,17 +9,17 @@ export const useTotalPrice = () => {
 
   const totalPrice = useMemo(() => {
     return cart.reduce((total, item) => {
-      return total + item.price * item.quantity;
+      return Math.ceil(total + item.price * item.quantity);
     }, 0);
   }, [cart]);
 
   const totalVat = useMemo(() => {
-    return totalPrice * vatRate;
+    return Math.ceil(totalPrice * vatRate);
   }, [totalPrice]);
 
   const totalGrand = useMemo(() => {
-    return totalPrice + totalVat + SHIPPING_COST;
+    return Math.ceil(totalPrice + totalVat + SHIPPING_COST);
   }, [totalVat, totalPrice]);
 
-  return [Math.ceil(totalPrice), Math.ceil(totalVat), Math.ceil(totalGrand)];
+  return { totalPrice, totalVat, totalGrand };
 };

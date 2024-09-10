@@ -1,12 +1,20 @@
 "use client";
 
-import ButtonOnCLick from "@/components/UI/ButtonOnClick";
+import { useState } from "react";
+import FinishedOrder from "../FinishedOrder/FinishedOrder";
 
 export default function Pay() {
+  const [orderState, setOrderState] = useState(true);
+
   return (
-    <ButtonOnCLick
-      text="CONTINUE & PAY"
-      onClickAction={() => alert("Checkout")}
-    />
+    <>
+      <button
+        className={`subtitle inline-block w-full cursor-pointer bg-orange py-[17.5px] text-center uppercase leading-none text-white transition-colors hover:bg-orangeLight`}
+        onClick={() => setOrderState(true)}
+      >
+        CONTINUE & PAY
+      </button>
+      <FinishedOrder setOrderState={setOrderState} orderState={orderState} />
+    </>
   );
 }
