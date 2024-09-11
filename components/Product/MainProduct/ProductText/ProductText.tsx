@@ -1,4 +1,4 @@
-import { formatter, getProduct } from "@/lib/utils/products/productsUtils";
+import { formatPrice, getProduct } from "@/lib/utils/products/productsUtils";
 
 import NewProduct from "./NewProduct";
 import ProductCounter from "./ProductCounter";
@@ -21,7 +21,7 @@ export default async function ProductText({ slug }: Props) {
       </h2>
       <p className="mb-6 mt-6 opacity-50 sm:mt-8 lg:mb-10">{description}</p>
       <p className="mb-12 text-[18px] font-bold tracking-[1.29px]">
-        {formatter.format(price)}
+        {formatPrice(price)}
       </p>
 
       <ProductCounter id={id} name={name} price={price} />

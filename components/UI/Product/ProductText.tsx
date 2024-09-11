@@ -1,4 +1,4 @@
-import { formatter } from "@/lib/utils/products/ProductUtilsClient";
+import { formatPrice } from "@/lib/utils/products/ProductUtilsClient";
 import React from "react";
 
 type Props = {
@@ -10,7 +10,7 @@ export default function ProductText({ name, price }: Props) {
   return (
     <div>
       <p className="font-bold">{name}</p>
-      <p className="font-bold opacity-50">{formatter.format(price)}</p>
+      <p className="font-bold opacity-50">{formatPrice(price)}</p>
     </div>
   );
 }

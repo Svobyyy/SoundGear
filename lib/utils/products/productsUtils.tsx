@@ -47,8 +47,10 @@ export const isCorrectCategory = async (
   return product;
 };
 
-export const formatter = new Intl.NumberFormat("en-US", {
+const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
   minimumFractionDigits: 0,
 });
+
+export const formatPrice = (price: number) => formatter.format(price);

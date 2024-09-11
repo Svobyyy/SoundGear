@@ -1,18 +1,12 @@
-import { useTotalPrice } from "@/lib/useTotalPrice";
-import OrderProduct from "./OrderProduct";
+import OrderText from "./Order/OrderText";
+import OrderProduct from "./Order/OrderProduct";
+import OrderProducts from "./Order/OrderProducts";
 
 export default function Order() {
-  const { totalGrand } = useTotalPrice();
-
   return (
-    <section className="mb-[42px] mt-8 flex w-full bg-red-50">
-      <ul>
-        <OrderProduct />
-      </ul>
-      <div className="gap-2 bg-black py-[42px] pl-[32px] text-white">
-        <p className="opacity-50">GRAND TOTAL</p>
-        <h6>{totalGrand}</h6>
-      </div>
+    <section className="mb-[42px] mt-8 flex w-full justify-between rounded-lg bg-gray transition-all">
+      <OrderProducts />
+      <OrderText />
     </section>
   );
 }

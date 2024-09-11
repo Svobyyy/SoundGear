@@ -1,5 +1,5 @@
 import BackgroundOverlay from "../../UI/BackgroundOverlay";
-import FinishedOrderBody from "./FinishedOrderBody";
+import FinishedOrderBody from "./FinishedOrder/FinishedOrderBody";
 
 type Props = {
   setOrderState: React.Dispatch<React.SetStateAction<boolean>>;
