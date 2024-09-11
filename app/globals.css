@@ -24,7 +24,7 @@
   p {
     @apply text-[15px] font-medium leading-[25px];
   }
-  label {
+  label span {
     @apply text-[12px] font-bold tracking-[-0.21px];
   }
   input {

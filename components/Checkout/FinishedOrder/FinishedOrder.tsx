@@ -13,7 +13,7 @@ export default function FinishedOrder({ setOrderState, orderState }: Props) {
         setOrderState={setOrderState}
         orderState={orderState}
       />
-      <BackgroundOverlay showSwitch={orderState} />
+      <BackgroundOverlay showSwitch={orderState} isCheckout />
     </>
   );
 }

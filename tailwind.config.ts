@@ -27,6 +27,7 @@ const config: Config = {
         gray: "#f1f1f1",
         grayLight: "#fafafa",
         white: "#FFFFFF",
+        red: "#CD2C2C",
       },
       backgroundColor: {
         orange: "#D87D4A",
@@ -36,10 +37,12 @@ const config: Config = {
         gray: "#f1f1f1",
         grayLight: "#fafafa",
         white: "#FFFFFF",
+        red: "#CD2C2C",
       },
       borderColor: {
         gray: "#CFCFCF",
         orange: "#D87D4A",
+        red: "#CD2C2C",
       },
     },
   },

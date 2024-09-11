@@ -5,7 +5,7 @@ import FinishedOrder from "../FinishedOrder/FinishedOrder";
 import { useCartContext } from "@/contexts/CartContextProvider";
 
 export default function Pay() {
-  const [orderState, setOrderState] = useState(true);
+  const [orderState, setOrderState] = useState(false);
   const { cart } = useCartContext();
 
   return (

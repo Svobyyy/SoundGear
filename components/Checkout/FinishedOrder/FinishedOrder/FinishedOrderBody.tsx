@@ -20,7 +20,7 @@ export default function FinishedOrderBody({
 }: Props) {
   return (
     <section
-      className={`absolute left-1/2 top-1/2 z-50 w-full max-w-[540px] -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-12 text-black transition-all ${setVisibility(orderState)}`}
+      className={`absolute sm:left-1/2 left-[20px] right-[20px] top-1/2 z-50 sm:w-full sm:max-w-[540px] sm:-translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-[32px] text-black transition-all sm:p-12 ${setVisibility(orderState)}`}
     >
       <FinishedOrderText />
 

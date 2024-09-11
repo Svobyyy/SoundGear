@@ -9,7 +9,7 @@ export default function Hamburger({ onClick }: Props) {
       height="15"
       xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
-      className="z-40 cursor-pointer sm:mr-[42px] tab:hidden group"
+      className="z-50 cursor-pointer sm:mr-[42px] tab:hidden group"
     >
       <g
         fill="#FFF"

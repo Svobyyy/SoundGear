@@ -8,7 +8,7 @@ export default function CartIcon({ onClick }: Props) {
       width="23"
       height="20"
       xmlns="http://www.w3.org/2000/svg"
-      className="group z-40 cursor-pointer sm:ml-auto tab:ml-0"
+      className="group z-50 cursor-pointer sm:ml-auto tab:ml-0"
       onClick={onClick}
     >
       <path
