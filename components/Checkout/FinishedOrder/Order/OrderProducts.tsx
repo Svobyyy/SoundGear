@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import OrderProduct from "./OrderProduct";
+import { useCartContext } from "@/contexts/CartContextProvider";
 
 const toggleViewMore = (setViewMore: Dispatch<SetStateAction<boolean>>) => {
   setViewMore((view) => !view);
@@ -7,6 +8,7 @@ const toggleViewMore = (setViewMore: Dispatch<SetStateAction<boolean>>) => {
 
 export default function OrderProducts() {
   const [viewMore, setViewMore] = useState(false);
+  const { cart } = useCartContext();
 
   return (
     <ul className="flex w-full flex-col items-center justify-center gap-4 p-6 transition-all">
@@ -15,7 +17,7 @@ export default function OrderProducts() {
         onClick={() => toggleViewMore(setViewMore)}
         className="cursor-pointer text-[12px] font-bold leading-[auto] tracking-[0.21px] opacity-50"
       >
-        {viewMore ? "View Less" : "View More"}
+        {viewMore ? "View Less" : `and ${cart.length} other item(s)`}
       </button>
     </ul>
   );

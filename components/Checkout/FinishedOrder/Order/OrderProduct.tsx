@@ -17,9 +17,9 @@ export default function OrderProduct({ viewMore }: { viewMore: boolean }) {
   return cart.map(({ price, name, quantity, id }, index) => (
     <li
       key={id}
-      className={`flex w-full max-w-[198px] justify-between border-b-[1px] border-gray pb-3 transition-opacity duration-500 ease-in-out ${index > 0 && !viewMore ? "hidden" : ""} ${index === 0 ? "opacity-100" : isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`gap-4 flex w-full max-w-none justify-between border-b-[1px] border-gray pb-3 transition-opacity duration-500 ease-in-out sm:max-w-[198px] ${index > 0 && !viewMore ? "hidden" : ""} ${index === 0 ? "opacity-100" : isVisible ? "opacity-100" : "opacity-0"}`}
     >
-      <div className="flex gap-4">
+      <section className="flex gap-4">
         <Image
           src={`/cart/${id}.jpg`}
           width={50}
@@ -34,7 +34,7 @@ export default function OrderProduct({ viewMore }: { viewMore: boolean }) {
             {formatPrice(price)}
           </p>
         </div>
-      </div>
+      </section>
 
       <p className="font-bold opacity-50">x{quantity}</p>
     </li>
