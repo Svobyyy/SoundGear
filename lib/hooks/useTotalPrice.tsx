@@ -1,6 +1,6 @@
 import { useCartContext } from "@/contexts/CartContextProvider";
 import { useMemo } from "react";
-import { SHIPPING_COST, VAT_RATE } from "./constants";
+import { SHIPPING_COST, VAT_RATE } from "../constants";
 
 const vatRate = VAT_RATE / 100;
 

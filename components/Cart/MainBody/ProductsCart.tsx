@@ -1,6 +1,6 @@
 import Product from "@/components/UI/Product";
 import { useCartContext } from "@/contexts/CartContextProvider";
-import { useLocalStorage } from "@/lib/useLocalStorage";
+import { useLocalStorage } from "@/lib/hooks/useLocalStorage";
 
 export default function ProductsCart() {
   const { cart } = useCartContext();

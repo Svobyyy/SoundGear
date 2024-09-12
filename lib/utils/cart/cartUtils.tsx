@@ -85,7 +85,7 @@ const removeAllFromCart = (setCart: Dispatch<SetStateAction<CartItem[]>>) => {
   setCart([]);
 };
 
-// Increasing or Decreasing state of Product's quantity to "ADD TO CART"
+// Increase and Decrease "Add To Cart" State Quantity
 
 const increaseQuantityState = (
   setQuantity: Dispatch<SetStateAction<number>>,

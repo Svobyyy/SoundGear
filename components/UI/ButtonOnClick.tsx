@@ -7,13 +7,20 @@ type Props = {
   onClickAction: () => void;
   width?: boolean;
   href: string;
+  disabled?: boolean;
 };
 
-export default function Button({ text, onClickAction, width, href }: Props) {
+export default function Button({
+  text,
+  onClickAction,
+  width,
+  href,
+  disabled,
+}: Props) {
   return (
     <Link
       onClick={onClickAction}
-      href={`/${href}`}
+      href={disabled ? "" : `/${href}`}
       className={`${width ? "w-[160px]" : "w-full"} subtitle inline-block cursor-pointer bg-orange py-[17.5px] text-center uppercase leading-none text-white transition-colors hover:bg-orangeLight`}
     >
       {text}

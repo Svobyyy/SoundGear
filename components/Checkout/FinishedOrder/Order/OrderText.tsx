@@ -1,4 +1,4 @@
-import { useTotalPrice } from "@/lib/useTotalPrice";
+import { useTotalPrice } from "@/lib/hooks/useTotalPrice";
 import { formatPrice } from "@/lib/utils/products/ProductUtilsClient";
 
 export default function OrderText() {

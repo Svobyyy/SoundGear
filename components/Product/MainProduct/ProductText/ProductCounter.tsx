@@ -22,6 +22,7 @@ export default function ProductCounter({ id, name, price }: CartCounterProps) {
       <ButtonOnClick
         text="ADD TO CART"
         width
+        disabled={quantity === 0}
         href="checkout"
         onClickAction={() =>
           quantity !== 0 && addToCart(setCart, id, price, name, quantity)

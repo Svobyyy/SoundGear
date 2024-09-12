@@ -1,6 +1,6 @@
 "use client";
 
-import { useTotalPrice } from "@/lib/useTotalPrice";
+import { useTotalPrice } from "@/lib/hooks/useTotalPrice";
 import TotalText from "../../UI/TotalText/TotalText";
 import { SHIPPING_COST } from "@/lib/constants";
 

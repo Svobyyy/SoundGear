@@ -5,7 +5,7 @@ import ProductsCart from "./ProductsCart";
 import HeaderCart from "./HeaderCart";
 import TotalText from "@/components/UI/TotalText/TotalText";
 import { setVisibility } from "@/lib/utils/utils";
-import { useTotalPrice } from "@/lib/useTotalPrice";
+import { useTotalPrice } from "@/lib/hooks/useTotalPrice";
 
 type Props = {
   setCartState: Dispatch<SetStateAction<boolean>>;
