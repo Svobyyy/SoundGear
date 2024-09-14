@@ -51,7 +51,7 @@ Custom Radio Buttons
 </li>
 </ul>
 
-## Instalation 
+## Installation
 
 ```bash
 git
