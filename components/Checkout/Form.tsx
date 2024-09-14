@@ -1,45 +1,48 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-import Input from "./Form/Input";
-import Payment from "./Form/PaymentInput";
+"use client";
+
+import { FieldValues, useForm } from "react-hook-form";
 import CashText from "./Form/CashText";
+import { zodResolver } from "@hookform/resolvers/zod";
+import ShippingInfo from "./Form/ShippingInfo";
+import PaymentDetails from "./Form/PaymentDetails";
+import { PaymentSchema, paymentSchema } from "@/lib/types/types";
+import BillingAddress from "./Form/BillingAdress";
 
 export default function Form() {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   watch,
-  //   formState: { errors },
-  // } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    watch,
+    formState: { errors, isSubmitting },
+  } = useForm<PaymentSchema>({
+    resolver: zodResolver(paymentSchema),
+  });
+
+  const paymentMethod = watch("payment");
+
+  const onSubmit = async (data: FieldValues) => {
+    console.log(data);
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    reset();
+  };
 
   return (
     <form
-      className={`w-full rounded-lg bg-white p-[31px] text-black tab:max-w-[730px] caret-[#D87D4A]`}
+      onSubmit={handleSubmit(onSubmit)}
+      className={`w-full rounded-lg bg-white p-[31px] text-black caret-[#D87D4A] tab:max-w-[730px]`}
     >
       <h3>CHECKOUT</h3>
-      <p className="subtitle mb-4 mt-[50px] text-orange">BILLING ADRESS</p>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <Input placeholder="Alexei Ward" labelName="Name" />
-        <Input placeholder="alexei@mail.com" labelName="Email Address" />
-        <Input placeholder="+1 202-555-0136" labelName="Phone Number" />
-      </div>
-      <p className="subtitle mb-4 mt-[50px] text-orange">shipping info</p>
-      <Input placeholder="Alexei Ward" labelName="Name" />
-      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <Input placeholder="Alexei Ward" labelName="Name" />
-        <Input placeholder="alexei@mail.com" labelName="Email Address" />
-        <Input placeholder="+1 202-555-0136" labelName="Phone Number" />
-      </div>
-      <p className="subtitle mb-4 mt-[50px] text-orange">Payment details</p>
-      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <Payment labelName="e-Money" />
-        <Payment labelName="Cash on Delivery" />
-      </div>
+      <BillingAddress register={register} errors={errors} />
+      <ShippingInfo register={register} errors={errors} />
+      <PaymentDetails register={register} errors={errors} />
 
-      <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <Input placeholder="alexei@mail.com" labelName="Email Address" />
-        <Input placeholder="+1 202-555-0136" labelName="Phone Number" />
-      </div>
-      <CashText />
+      {paymentMethod === "cash-on-delivery" && <CashText />}
+      <button type="submit" disabled={isSubmitting}>
+        Submit
+      </button>
     </form>
   );
 }
