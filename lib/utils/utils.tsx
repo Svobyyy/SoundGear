@@ -18,3 +18,14 @@ export const capitalizeFirstLetter = (string: string) => {
 export const setVisibility = (show: boolean) => {
   return show ? "visible" : "invisible opacity-0";
 };
+
+// removes unnecessary words to make a cleaner name, for example YX1 Wireless Earphones -> YX1
+
+import { REMOVE_FROM_NAME } from "@/lib/constants";
+
+export const removeUnnecessaryName = (name: string) => {
+  let words = name.split(" ");
+  words = words.filter((word) => !REMOVE_FROM_NAME.includes(word));
+
+  return words.join(" ");
+};
