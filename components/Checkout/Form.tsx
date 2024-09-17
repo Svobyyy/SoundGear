@@ -5,8 +5,10 @@ import CashText from "./Form/CashText";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ShippingInfo from "./Form/ShippingInfo";
 import PaymentDetails from "./Form/PaymentDetails";
-import { PaymentSchema, paymentSchema } from "@/lib/types/types";
 import BillingAddress from "./Form/BillingAdress";
+import { paymentSchema, PaymentSchema } from "@/lib/types/formTypes";
+import { useCartContext } from "@/contexts/CartContextProvider";
+import { StripePayment } from "@/lib/ServerActions";
 
 export default function Form() {
   const {
@@ -19,19 +21,26 @@ export default function Form() {
     resolver: zodResolver(paymentSchema),
   });
 
+  const { cart } = useCartContext();
+
   const paymentMethod = watch("payment");
 
   const onSubmit = async (data: FieldValues) => {
-    console.log(data);
+    const result = paymentSchema.safeParse(data);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    if (!result.success) {
+      alert(result.error);
+      return reset();
+    }
+
+    StripePayment(cart, data["email-address"]);
 
     reset();
   };
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(onSubmit)} // Issue: onSubmit should be a function, but it's a function call
       className={`w-full rounded-lg bg-white p-[31px] text-black caret-[#D87D4A] tab:max-w-[730px]`}
     >
       <h3>CHECKOUT</h3>

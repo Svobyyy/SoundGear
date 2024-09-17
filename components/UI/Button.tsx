@@ -5,7 +5,7 @@ type Props = {
   navigateTo: string;
   maxWidth?: boolean;
   black?: boolean; // Determines if the button should be styled as black
-  trans?: boolean; // Determines if the button should be styled as black
+  trans?: boolean; // Determines if the button should be styled as transparent
 };
 
 const styleOfButton = (

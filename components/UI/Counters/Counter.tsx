@@ -12,8 +12,8 @@ export default function Counter({
   decreaseQuantityState,
 }: CartCounterProps & {
   quantity?: number;
-  increaseQuantityState: (value: SetStateAction<number>) => void;
-  decreaseQuantityState: (value: SetStateAction<number>) => void;
+  increaseQuantityState?: (value: SetStateAction<number>) => void;
+  decreaseQuantityState?: (value: SetStateAction<number>) => void;
 }) {
   const { cart } = useCartContext();
 

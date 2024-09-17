@@ -1,7 +1,3 @@
-import Link from "next/link";
-import HamburgerMenu from "./Menu/HamburgerMenu";
-import Cart from "../Cart/Cart";
-import NavigationLink from "../UI/NavigationLink";
 import NewProduct from "./NewProduct";
 import Navbar from "./Navbar";
 

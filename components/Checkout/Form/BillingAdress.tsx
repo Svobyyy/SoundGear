@@ -1,6 +1,6 @@
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 import Input from "./Input";
-import { PaymentSchema } from "@/lib/types/types";
+import { PaymentSchema } from "@/lib/types/formTypes";
 
 type Props = {
   register: UseFormRegister<PaymentSchema>;

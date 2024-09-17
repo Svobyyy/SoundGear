@@ -1,4 +1,4 @@
-import { PaymentSchema } from "@/lib/types/types";
+import { PaymentSchema } from "@/lib/types/formTypes";
 import {
   FieldError,
   FieldErrorsImpl,
