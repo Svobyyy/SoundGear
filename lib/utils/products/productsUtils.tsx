@@ -41,7 +41,6 @@ export const isCorrectCategory = async (
   productSlug: string,
   categorySlug: string,
 ) => {
-  await connectMongo();
   const product: Product = await getProduct("slug", productSlug);
   if (product.category !== categorySlug) notFound();
   return product;

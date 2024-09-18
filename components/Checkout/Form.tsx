@@ -33,7 +33,11 @@ export default function Form() {
       return reset();
     }
 
-    StripePayment(cart, data["email-address"]);
+    try {
+      await StripePayment(cart, data["email-address"]);
+    } catch (error: Error | unknown) {
+      alert((error as Error).message);
+    }
 
     reset();
   };
