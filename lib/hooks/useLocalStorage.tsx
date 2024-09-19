@@ -2,6 +2,16 @@
 
 import { useCartContext } from "@/contexts/CartContextProvider";
 import { useEffect, useState } from "react";
+import { z } from "zod";
+
+const cartSchema = z.array(
+  z.object({
+    id: z.number(),
+    name: z.string(),
+    price: z.number().int().positive(),
+    quantity: z.number().int().positive(),
+  }),
+);
 
 export const useLocalStorage = () => {
   const { cart, setCart } = useCartContext();
@@ -10,8 +20,13 @@ export const useLocalStorage = () => {
   useEffect(() => {
     try {
       const localCart = localStorage.getItem("cart");
-      const parsedCart: CartItem[] = localCart ? JSON.parse(localCart) : [];
-      setCart(parsedCart);
+      const cart: unknown = localCart ? JSON.parse(localCart) : [];
+
+      const validateCart = cartSchema.safeParse(cart);
+
+      if (!validateCart.success) return localStorage.removeItem("cart");
+
+      setCart(validateCart.data);
     } catch (error) {
       console.error(error);
     } finally {
