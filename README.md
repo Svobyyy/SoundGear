@@ -6,8 +6,7 @@ Currently under development 💻
 
 Explore our range of **high-quality** audio products. 🎧
 
-🌐 Full-stack eCommerce website featuring **multiple categories**, **modern UI**,<br/>  and a **user-friendly** shopping experience. 🛒
-
+🌐 Full-stack eCommerce website featuring **multiple categories**, **modern UI**,<br/> and a **user-friendly** shopping experience. 🛒
 
 [Focus of this Project](#focus-of-this-project-) •
 [Technologies](#technologies) •
@@ -27,7 +26,6 @@ Explore our range of **high-quality** audio products. 🎧
 > [!IMPORTANT]
 > If you have any feedback on features, encounter any bugs, or have suggestions for improvements, I'd love to hear from you. Your insights help me grow as a developer!
 
-
 <h3>Technologies</h3>
 
 <ul>
@@ -42,9 +40,27 @@ Explore our range of **high-quality** audio products. 🎧
 </ul>
 
 ## Features
+
 <ul>
   <li>
 Interactive User Interface with Custom Input Types
+</li>
+<li>
+Server Side and Client Side Validation using Zod and Typescript
+  <ul>
+  <li>
+    LocalStorage
+  </li>
+  <li>
+    Form 
+  </li>
+  <li>
+    Product's details
+  </li>
+  <li>
+    Payment's details
+  </li>
+  <ul>
 </li>
 
 ![2024-09-1610-02-49-ezgif com-optimize](https://github.com/user-attachments/assets/fb8131ff-78a5-4289-8986-2d6c7837c968)
@@ -60,9 +76,6 @@ Interactive User Interface with Custom Input Types
 ![2024-09-1609-49-50-ezgif com-optimize](https://github.com/user-attachments/assets/00064bba-a913-473b-ab64-bea0bde888cb)
 ![ezgif com-optimize](https://github.com/user-attachments/assets/1f4d6be1-8a43-467f-b3e3-3bc92e8e8d3c)
 
-
-
-
 </ul>
 
 ## Installation
@@ -70,4 +83,3 @@ Interactive User Interface with Custom Input Types
 ```bash
 git
 ```
-

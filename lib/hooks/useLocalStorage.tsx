@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 import { z } from "zod";
 
 const cartSchema = z.array(
-  z.object({
-    id: z.number(),
-    name: z.string(),
-    price: z.number().int().positive(),
-    quantity: z.number().int().positive(),
-  }),
+  z
+    .object({
+      id: z.number(),
+      name: z.string(),
+      price: z.number().int().positive().min(100),
+      quantity: z.number().int().positive().gt(0).lt(10),
+    })
+    .strict(),
 );
 
 export const useLocalStorage = () => {
@@ -23,6 +25,8 @@ export const useLocalStorage = () => {
       const cart: unknown = localCart ? JSON.parse(localCart) : [];
 
       const validateCart = cartSchema.safeParse(cart);
+
+      console.log(validateCart);
 
       if (!validateCart.success) return localStorage.removeItem("cart");
 
