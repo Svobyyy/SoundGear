@@ -1,50 +1,23 @@
-"use client";
-
-import { FieldValues, useForm } from "react-hook-form";
+import { FieldErrors, UseFormRegister, UseFormWatch } from "react-hook-form";
 import CashText from "./Form/CashText";
-import { zodResolver } from "@hookform/resolvers/zod";
+
 import ShippingInfo from "./Form/ShippingInfo";
 import PaymentDetails from "./Form/PaymentDetails";
 import BillingAddress from "./Form/BillingAdress";
-import { paymentSchema, PaymentSchema } from "@/lib/types/formTypes";
-import { useCartContext } from "@/contexts/CartContextProvider";
-import { StripePayment } from "@/lib/ServerActions";
+import { PaymentSchema } from "@/lib/types/formTypes";
 
-export default function Form() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    watch,
-    formState: { errors, isSubmitting },
-  } = useForm<PaymentSchema>({
-    resolver: zodResolver(paymentSchema),
-  });
+type Props = {
+  watch: UseFormWatch<PaymentSchema>;
+  reset: () => void;
+  register: UseFormRegister<PaymentSchema>;
+  errors: FieldErrors<PaymentSchema>;
+};
 
-  const { cart } = useCartContext();
-
+export default function Form({ watch, register, errors }: Props) {
   const paymentMethod = watch("payment");
 
-  const onSubmit = async (data: FieldValues) => {
-    const result = paymentSchema.safeParse(data);
-
-    if (!result.success) {
-      alert(result.error);
-      return reset();
-    }
-
-    try {
-      await StripePayment(cart, data["email-address"]);
-    } catch (error: Error | unknown) {
-      alert((error as Error).message);
-    }
-
-    reset();
-  };
-
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)} // Issue: onSubmit should be a function, but it's a function call
+    <section
       className={`w-full rounded-lg bg-white p-[31px] text-black caret-[#D87D4A] tab:max-w-[730px]`}
     >
       <h3>CHECKOUT</h3>
@@ -53,9 +26,6 @@ export default function Form() {
       <PaymentDetails register={register} errors={errors} />
 
       {paymentMethod === "cash-on-delivery" && <CashText />}
-      <button type="submit" disabled={isSubmitting}>
-        Submit
-      </button>
-    </form>
+    </section>
   );
 }

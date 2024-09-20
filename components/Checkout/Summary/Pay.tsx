@@ -1,23 +1,21 @@
-"use client";
-
-import { useState } from "react";
-import FinishedOrder from "../FinishedOrder/FinishedOrder";
 import { useCartContext } from "@/contexts/CartContextProvider";
 
-export default function Pay() {
-  const [orderState, setOrderState] = useState(false);
+type Props = {
+  isSubmitting: boolean;
+};
+
+export default function Pay({ isSubmitting }: Props) {
   const { cart } = useCartContext();
 
   return (
     <>
       <button
-        className={`subtitle inline-block w-full cursor-pointer bg-orange py-[17.5px] text-center uppercase leading-none text-white transition-colors hover:bg-orangeLight`}
-        disabled={cart.length === 0}
-        onClick={() => setOrderState(true)}
+        className={`${cart.length === 0 ? "cursor-not-allowed bg-orangeLight" : "bg-orange"} subtitle inline-block w-full cursor-pointer py-[17.5px] text-center uppercase leading-none text-white transition-colors hover:bg-orangeLight`}
+        type="submit"
+        disabled={isSubmitting}
       >
         CONTINUE & PAY
       </button>
-      <FinishedOrder setOrderState={setOrderState} orderState={orderState} />
     </>
   );
 }

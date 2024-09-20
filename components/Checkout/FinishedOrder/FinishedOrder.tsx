@@ -1,19 +1,17 @@
-import BackgroundOverlay from "../../UI/BackgroundOverlay";
+"use client";
+
+import BackgroundOverlay from "@/components/UI/BackgroundOverlay";
 import FinishedOrderBody from "./FinishedOrder/FinishedOrderBody";
+import { useSearchParams } from "next/navigation";
 
-type Props = {
-  setOrderState: React.Dispatch<React.SetStateAction<boolean>>;
-  orderState: boolean;
-};
+export default function FinishedOrder() {
+  const searchParams = useSearchParams();
+  const isSuccessful = searchParams.get("checkout") === "success";
 
-export default function FinishedOrder({ setOrderState, orderState }: Props) {
   return (
     <>
-      <FinishedOrderBody
-        setOrderState={setOrderState}
-        orderState={orderState}
-      />
-      <BackgroundOverlay showSwitch={orderState} isCheckout />
+      <FinishedOrderBody orderState={isSuccessful} />
+      <BackgroundOverlay showSwitch={isSuccessful} isCheckout />
     </>
   );
 }
