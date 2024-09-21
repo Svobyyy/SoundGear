@@ -106,11 +106,10 @@ Explore our range of **high-quality** audio products. 🎧
   ![Interface Example 5](https://github.com/user-attachments/assets/d5da843f-b2bd-4cf1-970c-f93ce6421570)
   ![Interface Example 8](https://github.com/user-attachments/assets/6dbb7810-ab43-43c2-bd07-9bcf79a12124)
 
-  ![Interface Example 3](https://github.com/user-attachments/assets/bd597657-5140-4971-9425-0ec19ca641a0)
+  ![Interface Example 7](https://github.com/user-attachments/assets/3694fb26-8f54-41b6-b080-7be4bbe0fddb)
   ![Interface Example 6](https://github.com/user-attachments/assets/ca8e43ec-f595-4068-a51e-433757d6451e)
 
-
-  ![Interface Example 7](https://github.com/user-attachments/assets/3694fb26-8f54-41b6-b080-7be4bbe0fddb)
+  ![Interface Example 3](https://github.com/user-attachments/assets/bd597657-5140-4971-9425-0ec19ca641a0)
   ![Interface Example 10](https://github.com/user-attachments/assets/00064bba-a913-473b-ab64-bea0bde888cb)
 
 
