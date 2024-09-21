@@ -10,7 +10,7 @@ Explore our range of **high-quality** audio products. 🎧
 
 [Focus of this Project](#focus-of-this-project-) •
 [Technologies](#technologies) •
-[Features](#Features) •
+[Features](#Features-) •
 [Installation](#installation)
 
 </div>
@@ -40,39 +40,63 @@ Explore our range of **high-quality** audio products. 🎧
 ## Features ✨
 
 - **Server-Side and Client-Side Validation** using Zod and TypeScript 🛡️
-  
-  - Client-side LocalStorage validation
-  - Client and Server-side Form validation
-  - Client and Server-side Product details validation
-  - Client and Server-side Payment details validation
+
+  - Client and Server-side Validation
+    - User's information 
+    - Product's details
+    - Payment's details
+   
+  - Client-side Validation
+    - Cart's LocalStorage 
 
 - **Payment Gateway Integration with Stripe** 💰
 
-  - Custom success popup 🎉
-  - Custom canceled popup ❌
+  - Linking the validated email from the user's information 📧
+  - Custom Success Popup 🎉
+  - Custom Canceled Popup ❌
 
   ![Stripe Integration](https://github.com/user-attachments/assets/de13649d-8744-4bb3-931d-231d1aa1dd5f)
   ![Payment Successs](https://github.com/user-attachments/assets/7f798f70-ee55-4462-8657-fca84eca0736)
+  ![Payment Canceled)](https://github.com/user-attachments/assets/b4be959e-9ea8-4eb5-b3bb-9db4611e94f2)
+
+
+<br/>
+
+- **Saving the order and client's information to the database after successful payment 💾**
 
 <br/>
 
 - **Optimal Meta Data and SEO Optimization** 🌐
   
-  - SEO-Friendly URL structure with a custom 404 Not Found page
-  - Meta tags for better search engine visibility
-  - Optimized page load speed
-  - Accessible and mobile-friendly design
+  - SEO-Friendly URL structure with a custom 404 Not Found page ✅
+  - Meta tags for better search engine visibility ✅
+  - Optimized page load speed ✅
+  - Accessible and mobile-friendly design ✅
  
   ![Not Found Page](https://github.com/user-attachments/assets/846f229b-27a2-4ce7-bbbd-dc2bb4ef636e)
 
 <br/>
 
-- **Interactive User Interface with Custom Input Types** 🖱️
+- **Interactive User Interface with Custom Input Types 🖱️**
+  - Custom Input Types:
+    - Radio Button Input 📻 
+    - Text Input ✏️
+   
+  ![Interface Example 1](https://github.com/user-attachments/assets/fb8131ff-78a5-4289-8986-2d6c7837c968)
+  ![Interface Example 2](https://github.com/user-attachments/assets/2d6a6d4d-540a-42c0-b7cf-d96abb133cff)
+
+  - Animations:
+    - Fade In and Fade Out for Hamburger Menu, Cart, Opacity Overlay, etc. 🎬
+    - Hover Animations for Interactive Elements 🖼️ 
+
+
+
+
+
 
   
 
-  ![Interface Example 1](https://github.com/user-attachments/assets/fb8131ff-78a5-4289-8986-2d6c7837c968)
-  ![Interface Example 2](https://github.com/user-attachments/assets/2d6a6d4d-540a-42c0-b7cf-d96abb133cff)
+
 
 
   ![Interface Example 4](https://github.com/user-attachments/assets/b5eca559-b1aa-4156-9183-beff7a10e261)
