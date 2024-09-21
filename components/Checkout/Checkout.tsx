@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { FieldValues, useForm } from "react-hook-form";
 import Form from "./Form";
 import Summary from "./Summary";
-import { StripePayment } from "@/lib/ServerActions";
+import { StripePayment } from "@/lib/StripePayment";
 import { useCartContext } from "@/contexts/CartContextProvider";
 import FinishedOrder from "./FinishedOrder/FinishedOrder";
 
@@ -21,16 +21,17 @@ export default function Checkout() {
   });
 
   const { cart } = useCartContext();
-  const onSubmit = async (data: FieldValues) => {
-    const result = paymentSchema.safeParse(data);
 
-    if (!result.success) {
-      alert(result.error);
+  const onSubmit = async (data: PaymentSchema) => {
+    const formData = paymentSchema.safeParse(data);
+
+    if (!formData.success) {
+      alert(formData.error);
       return reset();
     }
 
     try {
-      await StripePayment(cart, data["email-address"]);
+      await StripePayment(cart, formData.data);
     } catch (error: Error | unknown) {
       alert((error as Error).message);
     }

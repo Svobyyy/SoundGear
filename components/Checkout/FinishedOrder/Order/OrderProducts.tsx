@@ -17,7 +17,7 @@ export default function OrderProducts() {
         onClick={() => toggleViewMore(setViewMore)}
         className="cursor-pointer text-[12px] font-bold leading-[auto] tracking-[0.21px] opacity-50"
       >
-        {viewMore ? "View Less" : `and ${cart.length} other item(s)`}
+        {viewMore ? "View Less" : `and ${cart.length - 1} other item(s)`}
       </button>
     </ul>
   );

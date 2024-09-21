@@ -1,16 +1,35 @@
+import Canceled from "@/components/icons/Canceled";
 import Confirmation from "@/components/icons/Confirmation";
 
-export default function FinishedOrderText() {
+type Props = {
+  isCanceled: boolean;
+};
+
+export default function FinishedOrderText({ isCanceled }: Props) {
   return (
     <>
-      <Confirmation />
+      {isCanceled ? <Canceled /> : <Confirmation />}
+
       <h3 className="mb-6 mt-[32px]">
-        THANK YOU
-        <br />
-        FOR YOUR ORDER
+        {isCanceled ? "ORDER CANCELED" : "THANK YOU"}
+
+        {!isCanceled && (
+          <>
+            <br />
+            FOR YOUR ORDER
+          </>
+        )}
       </h3>
       <p className="opacity-50">
-        You will receive an email confirmation shortly.
+        {isCanceled ? (
+          <>
+            Please verify your payment details and try again,
+            <br />
+            or contact our support team for assistance.
+          </>
+        ) : (
+          "You will receive an email confirmation shortly."
+        )}
       </p>
     </>
   );
