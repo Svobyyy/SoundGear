@@ -1,5 +1,3 @@
-Currently under development 💻
-
 <div align="center">
   
 # SoundGear
@@ -77,7 +75,7 @@ Explore our range of **high-quality** audio products. 🎧
 
 <br/>
 
-- **Interactive User Interface with Custom Input Types 🖱️**
+- **Interactive User Interface 🎨**
   - Custom Input Types:
     - Radio Button Input 📻 
     - Text Input ✏️
@@ -132,6 +130,23 @@ Explore our range of **high-quality** audio products. 🎧
 
 ## Installation
 
+- Clone the repository
+
 ```bash
-git
+git clone https://github.com/your-repo/soundgear.git
 ```
+
+- Navigate to the project folder
+```bash
+cd soundgear
+```
+
+- Create an .env file and add environment variables e.g ( Stripe key, MongoDB URL)
+
+```bash
+npm install
+```
+
+## License 📄
+
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
