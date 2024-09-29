@@ -45,11 +45,13 @@ Explore our range of **high-quality** audio products. 🎧
     - Payment's details
    
   - Client-side Validation
-    - Cart's LocalStorage 
+    - Cart's LocalStorage
+
+##
 
 - **Payment Gateway Integration with Stripe** 💰
 
-  - Linking the validated email from the user's information 📧
+  - Linking the validated email from the user's information
   - Custom Success Popup 🎉
   - Custom Canceled Popup ❌
 
@@ -57,12 +59,11 @@ Explore our range of **high-quality** audio products. 🎧
   ![Payment Successs](https://github.com/user-attachments/assets/7f798f70-ee55-4462-8657-fca84eca0736)
   ![Payment Canceled)](https://github.com/user-attachments/assets/b4be959e-9ea8-4eb5-b3bb-9db4611e94f2)
 
-
-<br/>
+##
 
 - **Saving the order and client's information to the database after successful payment 💾**
 
-<br/>
+##
 
 - **Optimal Meta Data and SEO Optimization** 🌐
   
@@ -73,9 +74,9 @@ Explore our range of **high-quality** audio products. 🎧
  
   ![Not Found Page](https://github.com/user-attachments/assets/846f229b-27a2-4ce7-bbbd-dc2bb4ef636e)
 
-<br/>
+##
 
-- **Interactive User Interface 🎨**
+- **Interactive User Interface**
   - Custom Input Types:
     - Radio Button Input 📻 
     - Text Input ✏️
@@ -114,19 +115,6 @@ Explore our range of **high-quality** audio products. 🎧
   
   ![Interface Example 11](https://github.com/user-attachments/assets/1f4d6be1-8a43-467f-b3e3-3bc92e8e8d3c)
   
-  
-  
-  
- 
-  
-
-
-    
-
-
-<br/>
-
-
 
 ## Installation
 
