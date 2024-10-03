@@ -138,3 +138,6 @@ npm install
 ## License 📄
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+
+## What I am most proud of, and what would I do differently next time
+## What challenges did I encounter, and how did you overcome them?
