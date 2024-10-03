@@ -139,5 +139,20 @@ npm install
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
-## What I am most proud of, and what would I do differently next time
-## What challenges did I encounter, and how did you overcome them?
+#
+
+### What I am most proud of, and what would I do differently next time
+#
+
+#### What I am most proud of
+- I heavily focused on improving my project's structure, which is super helpful for my future projects and work. 
+  I'm sure I improved my best practices and usage of React's hooks.
+- Learnt how to use the newest version of Next.js instead of older version -> Pages Router, therefore, I understand how to use Static Rendering in the newest App Router.
+- Validation of data on each part of the web application, making the website robust againts unnecessary errors.
+#### What would I do differently next time
+- I would definitely start with a great structure, I refined my code on a way but next time I will do the best practices from the beggining so I don't have to refine the code so much, which takes time.
+
+#
+
+### What challenges did I encounter, and how did you overcome them?
+- I didn't know optimal way to validate data neither Client Side nor Server Side. I researeched quite a bit about this topic and decided to use combination of Regex and Zod, new technologies for me. 
