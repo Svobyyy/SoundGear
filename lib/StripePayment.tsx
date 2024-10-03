@@ -5,7 +5,7 @@ import Stripe from "stripe";
 import connectMongo from "./utils/db/connectMongo";
 import ProductsModel from "./models/productsModel";
 import { paymentSchema, PaymentSchema } from "./types/formTypes";
-import mongoose from "mongoose";
+import UserOrderModel from "./models/userOrderModel";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   throw new Error("Stripe secret key not found");
@@ -13,7 +13,6 @@ if (!process.env.STRIPE_SECRET_KEY) {
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
 
 export const StripePayment = async (cart: CartItem[], data: PaymentSchema) => {
-  try {
     await connectMongo();
 
     const formData = paymentSchema.safeParse(data);
@@ -59,14 +58,25 @@ export const StripePayment = async (cart: CartItem[], data: PaymentSchema) => {
     });
 
     if (session.success_url) {
-      //send data to backend
+      const newOrder = new UserOrderModel({
+        cart, 
+        payment: {
+          emailAddress: data["email-address"],
+          name: data.name,
+          phoneNumber: data["phone-number"],
+          payment: data.payment,
+          address: data.address,
+          city: data.city,
+          country: data.country,
+          zipCode: data["zip-code"],
+        },
+      });
+      
+      // Save the order to the database
+      await newOrder.save();
     }
 
+
     session.url && redirect(session.url);
-    throw new Error("Failed to create Stripe session");
-  } catch (error) {
-    throw new Error((error as Error).message);
-  } finally {
-    await mongoose.disconnect();
-  }
+
 };

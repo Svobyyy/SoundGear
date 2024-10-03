@@ -7,7 +7,7 @@ type Props = {
   onClickAction: () => void;
   width?: boolean;
   href: string;
-  cancel: boolean;
+  cancel?: boolean;
 };
 
 export default function Button({
