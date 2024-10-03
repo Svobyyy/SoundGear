@@ -17,7 +17,7 @@ Explore our range of **high-quality** audio products. 🎧
 
 - **Next.js (App Router)**: Server Actions, Static and Client-Side Rendering
 - **Best Practices**: Structure, Readability, Metadata, Reusable Components and Utilities
-- **React Hooks**: Utilizing hooks like `useMemo`, `useCallback`, `useContext`, `memo`, and `Custom Hooks`
+- **React Hooks**: Utilizing hooks like `useMemo`, `useContext`, `Custom Hooks` etc.
 
 > [!IMPORTANT] 
 > If you have any feedback on features, encounter any bugs, or have suggestions for improvements, I'd love to hear from you. Your insights help me grow as a developer!
@@ -141,18 +141,18 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 #
 
-### What I am most proud of, and what would I do differently next time
+### What I Am Most Proud Of and What I'd Do Differently Next Time 🚀
 #
 
-#### What I am most proud of
-- I heavily focused on improving my project's structure, which is super helpful for my future projects and work. 
-  I'm sure I improved my best practices and usage of React's hooks.
-- Learnt how to use the newest version of Next.js instead of older version -> Pages Router, therefore, I understand how to use Static Rendering in the newest App Router.
-- Validation of data on each part of the web application, making the website robust againts unnecessary errors.
-#### What would I do differently next time
-- I would definitely start with a great structure, I refined my code on a way but next time I will do the best practices from the beggining so I don't have to refine the code so much, which takes time.
+#### What I Am Most Proud Of: 🎉
+- **Project Structure & Best Practices:** I focused on creating a clean, scalable, and maintainable structure, which is super helpful for future projects. This has also enhanced my understanding of React hooks and coding best practices. 🛠️
+- **Next.js App Router:** Learning to use the newest App Router in Next.js (moving from the Pages Router). ⚡
+- **Data Validation:** Implementing validation across all parts of the website, ensuring user, product, and payment data are thoroughly validated, made It more robust and reliable. ✅
+
+#### What I'd Do Differently Next Time: 🔄
+- **Start with Best Practices from the Beginning:** While I refined the structure and code during development, I realized how much time could be saved by implementing best practices early on. Next time, I’ll ensure an optimal structure from the start to avoid unnecessary refactoring. ⏳
 
 #
 
-### What challenges did I encounter, and how did you overcome them?
-- I didn't know optimal way to validate data neither Client Side nor Server Side. I researeched quite a bit about this topic and decided to use combination of Regex and Zod, new technologies for me. 
+### Challenges I Encountered and How I Overcame Them: 💡
+- **Data Validation:** I wasn’t sure how to handle both client-side and server-side validation at first. After researching, I used a combination of Regex and Zod, which were new to me, but ultimately made the validation process smoother and improved my skills. 🔍
