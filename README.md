@@ -158,3 +158,5 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ### Challenges I Encountered and How I Overcame Them: 💡
 - **Data Validation:** I wasn’t sure how to handle both client-side and server-side validation at first. After researching, I used a combination of Regex and Zod, which were new to me, but ultimately made the validation process smoother and improved my skills. 🔍
+
+#### Video Demo:  [cs50](https://youtu.be/paNiwOPRY4U)
