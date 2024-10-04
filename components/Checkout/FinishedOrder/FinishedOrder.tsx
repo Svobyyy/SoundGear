@@ -15,6 +15,7 @@ export default function FinishedOrder() {
         orderState={isSuccessful || isCanceled}
         isCanceled={isCanceled}
       />
+
       <BackgroundOverlay showSwitch={isSuccessful || isCanceled} isCheckout />
     </>
   );

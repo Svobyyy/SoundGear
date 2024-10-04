@@ -26,8 +26,6 @@ export const useLocalStorage = () => {
 
       const validateCart = cartSchema.safeParse(cart);
 
-      console.log(validateCart);
-
       if (!validateCart.success) return localStorage.removeItem("cart");
 
       setCart(validateCart.data);

@@ -2,12 +2,13 @@
 
 import { PaymentSchema, paymentSchema } from "@/lib/types/formTypes";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FieldValues, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import Form from "./Form";
 import Summary from "./Summary";
 import { StripePayment } from "@/lib/StripePayment";
 import { useCartContext } from "@/contexts/CartContextProvider";
 import FinishedOrder from "./FinishedOrder/FinishedOrder";
+import { Suspense } from "react";
 
 export default function Checkout() {
   const {
@@ -49,7 +50,9 @@ export default function Checkout() {
         <Summary isSubmitting={isSubmitting} />
       </form>
 
-      <FinishedOrder />
+      <Suspense>
+        <FinishedOrder />
+      </Suspense>
     </>
   );
 }

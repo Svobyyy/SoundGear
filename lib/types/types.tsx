@@ -75,10 +75,3 @@ type CartCounterProps = {
   name: Product["name"];
   price: Product["price"];
 };
-
-type CartItemProps = {
-  id: Product["id"];
-  name: Product["name"];
-  price: Product["price"];
-  quantity: number;
-};

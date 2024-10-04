@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
-import Arrow from "../../icons/Arrow";
 import CategoryMenuText from "./CategoryMenuText";
 
 type Props = {

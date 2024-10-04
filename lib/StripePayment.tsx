@@ -72,7 +72,6 @@ export const StripePayment = async (cart: CartItem[], data: PaymentSchema) => {
         },
       });
       
-      // Save the order to the database
       await newOrder.save();
     }
 
