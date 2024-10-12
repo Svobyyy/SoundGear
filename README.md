@@ -51,19 +51,15 @@ Explore our range of **high-quality** audio products. 🎧
 
 - **Payment Gateway Integration with Stripe** 💰
 
-  - Linking the validated email from the user's information
   - Custom Success Popup 🎉
   - Custom Canceled Popup ❌
+  - Saving the order and client's information to the database with Stripe Webhook 💾
+  - Linking the validated email from the user's information
 
   ![Stripe Integration](https://github.com/user-attachments/assets/de13649d-8744-4bb3-931d-231d1aa1dd5f)
   ![Payment Successs](https://github.com/user-attachments/assets/7f798f70-ee55-4462-8657-fca84eca0736)
   ![Payment Canceled)](https://github.com/user-attachments/assets/b4be959e-9ea8-4eb5-b3bb-9db4611e94f2)
-
-##
-
-- **Saving the order and client's information to the database after successful payment 💾**
   ![userOrder](https://github.com/user-attachments/assets/36fab0a5-4dca-4f41-9e37-994819b9ceb2)
-
 
 ##
 
