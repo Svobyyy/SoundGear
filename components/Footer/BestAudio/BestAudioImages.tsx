@@ -9,7 +9,7 @@ export default function BestAudioImages() {
         alt="man with headphones"
         src={"/shared/desktop/image-best-gear.jpg"}
         height={588}
-        className="hidden lg:inline-block"
+        className="hidden rounded-lg lg:inline-block"
       />
       <Image
         quality={100}
@@ -17,7 +17,7 @@ export default function BestAudioImages() {
         alt="man with headphones"
         src={"/shared/tablet/image-best-gear.jpg"}
         height={600}
-        className="hidden min-h-[300px] object-cover sm:inline-block lg:hidden"
+        className="hidden min-h-[300px] rounded-lg object-cover sm:inline-block lg:hidden"
       />
       <Image
         quality={100}
@@ -25,7 +25,7 @@ export default function BestAudioImages() {
         alt="man with headphones"
         src={"/shared/mobile/image-best-gear.jpg"}
         height={600}
-        className="inline-block min-h-[300px] object-cover sm:hidden"
+        className="inline-block min-h-[300px] rounded-lg object-cover sm:hidden"
       />
     </>
   );
