@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import connectMongo from "./utils/db/connectMongo";
 import ProductsModel from "./models/ProductsModel";
 import { paymentSchema, PaymentSchema } from "./types/formTypes";
-import UserOrderModel from "./models/UserOrderModel";
+import UserOrderModel from "@/lib/models/UserOrderModel";
 
 export const onDeliveryPayment = async (
   cart: CartItem[],
