@@ -28,12 +28,17 @@ export async function POST(req: Request) {
   const session = event.data.object as Stripe.Checkout.Session;
   const metadata = session.metadata;
 
-  const cart = metadata ? JSON.parse(metadata.cart) : null;
-  const data = metadata ? JSON.parse(metadata.data) : null;
-
   // Save the order and User's Information to the database
 
-  if (event.type === "checkout.session.completed" && data && cart) {
+  if (
+    event.type === "checkout.session.completed" &&
+    metadata &&
+    metadata.data &&
+    metadata.cart
+  ) {
+    const cart = metadata ? JSON.parse(metadata.cart) : null;
+    const data = metadata ? JSON.parse(metadata.data) : null;
+
     const newOrder = new UserOrderModel({
       cart,
       payment: {
