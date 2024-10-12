@@ -51,8 +51,8 @@ export const StripePayment = async (cart: CartItem[], data: PaymentSchema) => {
   const session = await stripe.checkout.sessions.create({
     line_items: StripeProducts,
     mode: "payment",
-    success_url: `http://localhost:3000/checkout?checkout=success`,
-    cancel_url: `http://localhost:3000/checkout?checkout=canceled`,
+    success_url: `https://soundgear.vercel.app//checkout?checkout=success`,
+    cancel_url: `https://soundgear.vercel.app//checkout?checkout=canceled`,
     customer_email: data["email-address"],
     metadata: {
       cart: JSON.stringify(cart),
