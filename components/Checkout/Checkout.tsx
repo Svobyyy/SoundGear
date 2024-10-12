@@ -9,6 +9,7 @@ import { StripePayment } from "@/lib/StripePayment";
 import { useCartContext } from "@/contexts/CartContextProvider";
 import FinishedOrder from "./FinishedOrder/FinishedOrder";
 import { Suspense } from "react";
+import { onDeliveryPayment } from "@/lib/onDeliveryPayment";
 
 export default function Checkout() {
   const {
@@ -31,13 +32,18 @@ export default function Checkout() {
       return reset();
     }
 
+    if (formData.data.payment === "cash-on-delivery") {
+      onDeliveryPayment(cart, formData.data);
+      return reset();
+    }
+
     try {
       await StripePayment(cart, formData.data);
     } catch (error: Error | unknown) {
       alert((error as Error).message);
     }
 
-    reset();
+    return reset();
   };
 
   return (
