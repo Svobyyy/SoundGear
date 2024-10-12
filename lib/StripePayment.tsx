@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 import Stripe from "stripe";
 import connectMongo from "./utils/db/connectMongo";
-import ProductsModel from "@/lib/models/productsModel";
+import ProductsModel from "@/lib/models/ProductsModel";
 import { paymentSchema, PaymentSchema } from "./types/formTypes";
 
 if (!process.env.STRIPE_SECRET_KEY) {

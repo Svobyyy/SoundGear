@@ -1,4 +1,4 @@
-import ProductsModel from "@/lib/models/productsModel";
+import ProductsModel from "@/lib/models/ProductsModel";
 import connectMongo from "../db/connectMongo";
 import { notFound } from "next/navigation";
 

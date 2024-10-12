@@ -2,9 +2,9 @@
 
 import { redirect } from "next/navigation";
 import connectMongo from "./utils/db/connectMongo";
-import ProductsModel from "./models/productsModel";
+import ProductsModel from "./models/ProductsModel";
 import { paymentSchema, PaymentSchema } from "./types/formTypes";
-import UserOrderModel from "./models/userOrderModel";
+import UserOrderModel from "./models/UserOrderModel";
 
 export const onDeliveryPayment = async (
   cart: CartItem[],
