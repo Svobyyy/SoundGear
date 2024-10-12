@@ -83,7 +83,7 @@ const UserOrderSchema = new Schema({
   },
 });
 
-const UserOrderModel =
+const OrderModel =
   models.UserOrder || model("UserOrder", UserOrderSchema);
 
-export default UserOrderModel;
+export default OrderModel;

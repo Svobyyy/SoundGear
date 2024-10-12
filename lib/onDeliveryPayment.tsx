@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import connectMongo from "./utils/db/connectMongo";
 import ProductsModel from "./models/ProductsModel";
 import { paymentSchema, PaymentSchema } from "./types/formTypes";
-import UserOrderModel from "./models/UserOrderModel";
+import OrderModel from "./models/OrderModel";
 
 export const onDeliveryPayment = async (
   cart: CartItem[],
@@ -35,7 +35,7 @@ export const onDeliveryPayment = async (
       );
   });
 
-  const newOrder = new UserOrderModel({
+  const newOrder = new OrderModel({
     cart,
     payment: {
       emailAddress: data["email-address"],

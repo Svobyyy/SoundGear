@@ -1,7 +1,7 @@
 import Stripe from "stripe";
 import { NextResponse } from "next/server";
 import { headers } from "next/headers";
-import UserOrderModel from "../../../lib/models/UserOrderModel";
+import OrderModel from "@/lib/models/OrderModel";
 
 if (!process.env.STRIPE_SECRET_KEY) {
   throw new Error("Stripe secret key not found");
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     const cart = metadata ? JSON.parse(metadata.cart) : null;
     const data = metadata ? JSON.parse(metadata.data) : null;
 
-    const newOrder = new UserOrderModel({
+    const newOrder = new OrderModel({
       cart,
       payment: {
         emailAddress: data["email-address"],
