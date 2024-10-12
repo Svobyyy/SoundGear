@@ -49,7 +49,7 @@ Explore our range of **high-quality** audio products. 🎧
 
 ##
 
-- **Payment Gateway Integration with Stripe** 💰
+- **Seamless Stripe Payment Gateway Integration with Webhook Listening 💰**
 
   - Custom Success Popup 🎉
   - Custom Canceled Popup ❌
