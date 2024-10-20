@@ -20,7 +20,7 @@ export const primaryHomeBox = {
     desktop: {
       source: "/home/desktop/image-speaker-zx9.png",
       width: 410,
-      height: 493,
+      height: 498,
     },
   },
   category: "speakers",
