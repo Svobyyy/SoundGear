@@ -19,6 +19,7 @@ export default async function ProductImages({ slug }: Props) {
         alt={`${name} image`}
         quality={100}
         className="hidden rounded-lg lg:inline-block"
+        priority
         src={desktop}
       />
       <Image
@@ -27,6 +28,7 @@ export default async function ProductImages({ slug }: Props) {
         alt={`${name} image`}
         quality={100}
         className="hidden max-h-[480px] max-w-[380px] rounded-lg object-cover sm:inline-block lg:hidden"
+        priority
         src={tablet}
       />
       <Image
@@ -34,6 +36,7 @@ export default async function ProductImages({ slug }: Props) {
         width={654}
         alt={`${name} image`}
         src={mobile}
+        priority
         height={704}
         className="inline-block min-h-[380px] rounded-lg object-cover sm:hidden"
       />
