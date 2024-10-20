@@ -14,7 +14,6 @@ export default async function ProductsShowCase({ slugCategory }: Props) {
       {products.map(({ slug }, index) => {
         return (
           <ProductShowCase
-            isFirst={index === 0 ? true : false}
             key={index}
             slug={slug}
             isOdd={index % 2 === 0 ? false : true}
