@@ -24,13 +24,13 @@ export const primaryHomeBox = {
     },
     tablet: {
       source: "/home/desktop/image-speaker-zx9.png",
-      width: 189,
-      height: 229,
+      width: 210,
+      height: 255,
     },
     mobile: {
       source: "/home/desktop/image-speaker-zx9.png",
-      width: 172,
-      height: 209,
+      width: 168,
+      height: 204,
     },
   },
   category: "speakers",
