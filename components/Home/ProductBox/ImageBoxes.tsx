@@ -24,7 +24,7 @@ type Props = {
 };
 
 const primaryBoxStyle =
-  "top-[55px] z-[1] h-[209px] w-[172px] sm:top-[52px] sm:h-[239px] sm:w-[197px] lg:bottom-[-20px] lg:left-[75px] lg:top-[80px] lg:h-[498px] lg:w-[410px] main:left-[120px]";
+  "absolute top-[55px] z-[1] sm:top-[52px] lg:bottom-[-20px] lg:left-[75px] lg:top-[80px] lg:h-[498px] main:left-[120px]";
 
 export default function ImageBoxes({
   image: { desktop, tablet, mobile },
@@ -39,7 +39,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`} // alt text for the productBox without any text
           width={desktop?.width}
           height={desktop?.height}
-          className={`${primary ? primaryBoxStyle : "bottom-0 left-0 hidden h-full object-cover maintab:inline-block"} absolute`}
+          className={`hidden ${primary ? `${primaryBoxStyle} lg:inline-block` : "absolute bottom-0 left-0 hidden h-full object-cover maintab:inline-block"}`}
           src={`${desktop?.source}`}
         />
       )}
@@ -50,7 +50,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`}
           width={tablet?.width}
           height={tablet?.height}
-          className={`absolute bottom-0 left-0 hidden h-full object-cover mob:inline-block maintab:hidden`}
+          className={`hidden ${primary ? `${primaryBoxStyle} sm:inline-block lg:hidden` : "absolute bottom-0 left-0 hidden h-full object-cover maintab:inline-block tab:hidden"}`}
           src={`${tablet?.source}`}
         />
       )}
@@ -61,7 +61,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`}
           width={mobile?.width}
           height={mobile?.height}
-          className={`absolute bottom-0 left-0 h-full object-cover mob:hidden`}
+          className={`${primary ? `${primaryBoxStyle} sm:hidden` : "absolute bottom-0 left-0 h-full object-cover mob:hidden"}`}
           src={`${mobile?.source}`}
         />
       )}

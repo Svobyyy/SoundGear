@@ -22,6 +22,16 @@ export const primaryHomeBox = {
       width: 410,
       height: 498,
     },
+    tablet: {
+      source: "/home/desktop/image-speaker-zx9.png",
+      width: 197,
+      height: 239,
+    },
+    mobile: {
+      source: "/home/desktop/image-speaker-zx9.png",
+      width: 172,
+      height: 209,
+    },
   },
   category: "speakers",
   slug: "zx9-speaker",
