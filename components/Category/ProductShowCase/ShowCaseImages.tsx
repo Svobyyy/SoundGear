@@ -4,9 +4,10 @@ import React from "react";
 
 type Props = {
   slug: string;
+  isFirst: boolean;
 };
 
-export default async function ShowCaseImages({ slug }: Props) {
+export default async function ShowCaseImages({ slug, isFirst }: Props) {
   const {
     categoryImage: { desktop, tablet, mobile },
     name,
@@ -19,6 +20,7 @@ export default async function ShowCaseImages({ slug }: Props) {
         height={560}
         alt={`${name} image`}
         quality={100}
+        priority={isFirst}
         className="hidden rounded-lg lg:inline-block"
         src={desktop}
       />
@@ -27,7 +29,8 @@ export default async function ShowCaseImages({ slug }: Props) {
         height={704}
         alt={`${name} image`}
         quality={100}
-        className="hidden min-h-[400px] rounded-lg sm:inline-block lg:hidden object-cover"
+        priority={isFirst}
+        className="hidden min-h-[400px] rounded-lg object-cover sm:inline-block lg:hidden"
         src={tablet}
       />
       <Image
@@ -35,6 +38,7 @@ export default async function ShowCaseImages({ slug }: Props) {
         width={654}
         alt={`${name} image`}
         src={mobile}
+        priority={isFirst}
         height={704}
         className="inline-block min-h-[380px] rounded-lg object-cover sm:hidden"
       />
