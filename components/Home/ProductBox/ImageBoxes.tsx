@@ -39,7 +39,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`} // alt text for the productBox without any text
           width={desktop?.width}
           height={desktop?.height}
-          className={`hidden ${primary ? `${primaryBoxStyle} lg:inline-block` : "absolute bottom-0 left-0 hidden h-full object-cover maintab:inline-block"}`}
+          className={`hidden ${primary ? `${primaryBoxStyle} lg:inline-block w-[${desktop?.width}] h-[${desktop?.height}]` : "absolute bottom-0 left-0 hidden h-full object-cover maintab:inline-block"}`}
           src={`${desktop?.source}`}
         />
       )}
@@ -50,7 +50,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`}
           width={tablet?.width}
           height={tablet?.height}
-          className={`hidden ${primary ? `${primaryBoxStyle} sm:inline-block lg:hidden` : "absolute bottom-0 left-0 hidden h-full object-cover maintab:inline-block tab:hidden"}`}
+          className={`hidden ${primary ? `${primaryBoxStyle} sm:inline-block lg:hidden w-[${tablet?.width}] h-[${tablet?.height}]` : "absolute bottom-0 left-0 hidden h-full object-cover maintab:inline-block tab:hidden"}`}
           src={`${tablet?.source}`}
         />
       )}
@@ -61,7 +61,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`}
           width={mobile?.width}
           height={mobile?.height}
-          className={`${primary ? `${primaryBoxStyle} sm:hidden` : "absolute bottom-0 left-0 h-full object-cover mob:hidden"}`}
+          className={`${primary ? `${primaryBoxStyle} sm:hidden w-[${mobile?.width}] h-[${mobile?.height}]` : "absolute bottom-0 left-0 h-full object-cover mob:hidden"}`}
           src={`${mobile?.source}`}
         />
       )}
