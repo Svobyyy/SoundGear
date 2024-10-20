@@ -50,7 +50,7 @@ export default function ImageBoxes({
           alt={`${name || quaternaryHomeBox.name} photo`}
           width={tablet?.width}
           height={tablet?.height}
-          className={`hidden ${primary ? `${primaryBoxStyle} sm:inline-block lg:hidden h-[${tablet.height}]` : "absolute bottom-0 left-0 hidden h-full object-cover maintab:inline-block tab:hidden"}`}
+          className={`hidden ${primary ? `${primaryBoxStyle} sm:inline-block lg:hidden h-[${tablet.height}]` : "absolute bottom-0 left-0 hidden h-full object-cover mob:inline-block tab:hidden"}`}
           src={`${tablet?.source}`}
         />
       )}
