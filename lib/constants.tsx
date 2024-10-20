@@ -87,3 +87,26 @@ export const quaternaryHomeBox = {
   slug: "yx1-earphones",
   category: "earphones",
 };
+
+// Categories
+
+export const earphonesThumbnail = {
+  name: "earphones",
+  source: "/shared/desktop/image-category-thumbnail-earphones.png",
+  width: 160,
+  height: 139,
+};
+
+export const headphonesThumbnail = {
+  name: "headphones",
+  source: "/shared/desktop/image-category-thumbnail-headphones.png",
+  width: 145,
+  height: 139,
+};
+
+export const speakersThumbnail = {
+  name: "speakers",
+  source: "/shared/desktop/image-category-thumbnail-speakers.png",
+  width: 149,
+  height: 139,
+};

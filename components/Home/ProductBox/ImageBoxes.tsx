@@ -24,7 +24,7 @@ type Props = {
 };
 
 const primaryBoxStyle =
-  "absolute top-[55px] z-[1] sm:top-[52px] lg:bottom-[-20px] lg:left-[75px] lg:top-[80px] main:left-[120px]";
+  "absolute top-[55px] z-[1] sm:top-[52px] lg:bottom-[-20px] lg:left-[60px] lg:top-[80px] main:left-[120px]";
 
 export default function ImageBoxes({
   image: { desktop, tablet, mobile },
