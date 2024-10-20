@@ -19,13 +19,13 @@ export const primaryHomeBox = {
   image: {
     desktop: {
       source: "/home/desktop/image-speaker-zx9.png",
-      width: 410,
-      height: 498,
+      width: 420,
+      height: 510,
     },
     tablet: {
       source: "/home/desktop/image-speaker-zx9.png",
-      width: 197,
-      height: 239,
+      width: 189,
+      height: 229,
     },
     mobile: {
       source: "/home/desktop/image-speaker-zx9.png",
