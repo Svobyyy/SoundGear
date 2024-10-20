@@ -9,7 +9,7 @@ export default function HeaderCart() {
     <div className="flex justify-between">
       <h6>Cart({cart.length})</h6>
       <p
-        className="cursor-pointer underline opacity-50 transition-all hover:text-orange hover:opacity-100"
+        className="cursor-pointer underline opacity-75 transition-all hover:text-orange hover:opacity-100"
         onClick={() => removeAllFromCart()}
       >
         Remove all

@@ -19,7 +19,7 @@ export default async function ShowCaseText({ slug }: Props) {
         </p>
       )}
       <h2 className="max-w-[200px] sm:max-w-[400px]">{name}</h2>
-      <p className="mb-6 mt-6 opacity-50 sm:mt-8 lg:mb-10">{description}</p>
+      <p className="mb-6 mt-6 opacity-75 sm:mt-8 lg:mb-10">{description}</p>
       <Button text="SEE PRODUCT" navigateTo={`${category}/${slug}`} maxWidth />
     </div>
   );

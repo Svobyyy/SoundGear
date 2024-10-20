@@ -10,7 +10,7 @@ export default function Includes({ includes }: Props) {
         {includes.map(({ quantity, item }) => (
           <li key={item} className="flex gap-5">
             <p className="font-bold text-orange">{quantity}x</p>
-            <p className="opacity-50">{item}</p>
+            <p className="opacity-75">{item}</p>
           </li>
         ))}
       </ul>

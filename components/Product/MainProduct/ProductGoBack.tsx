@@ -6,8 +6,11 @@ type Props = {
 
 export default function ProductGoBack({ category }: Props) {
   return (
-    <Link href={`/${category}`} className="group">
-      <p className="mb-[24px] opacity-50 transition-all group-hover:text-orange group-hover:opacity-100 tab:mb-[56px]">
+    <Link
+      href={`/${category}`}
+      className="group mb-[24px] inline-block tab:mb-[56px]"
+    >
+      <p className="opacity-75 transition-all group-hover:text-orange group-hover:opacity-100">
         Go Back
       </p>
     </Link>

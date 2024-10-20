@@ -11,7 +11,7 @@ export default function CategoryText({ category }: Props) {
         {category}
       </p>
       <div className="mb-[22px] flex items-center gap-[14px] md:mb-[30px]">
-        <p className="subtitle leading-none opacity-50 transition-all group-hover:text-orange group-hover:opacity-100">
+        <p className="subtitle leading-none opacity-75 transition-all group-hover:text-orange group-hover:opacity-100">
           SHOP
         </p>
         <Arrow />

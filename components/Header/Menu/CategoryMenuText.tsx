@@ -7,7 +7,7 @@ export default function CategoryMenuText({ category }: { category: string }) {
         {category}
       </p>
       <div className="mb-[22px] flex items-center gap-[14px]">
-        <p className="subtitle opacity-50 group-hover:text-orange group-hover:opacity-100">
+        <p className="subtitle opacity-75 group-hover:text-orange group-hover:opacity-100">
           SHOP
         </p>
         <Arrow />

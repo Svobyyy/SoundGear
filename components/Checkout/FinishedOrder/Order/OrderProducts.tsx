@@ -15,7 +15,7 @@ export default function OrderProducts() {
       <OrderProduct viewMore={viewMore} />
       <button
         onClick={() => toggleViewMore(setViewMore)}
-        className="cursor-pointer text-[12px] font-bold leading-[auto] tracking-[0.21px] opacity-50"
+        className="cursor-pointer text-[12px] font-bold leading-[auto] tracking-[0.21px] opacity-75"
       >
         {viewMore ? "View Less" : `and ${cart.length - 1} other item(s)`}
       </button>

@@ -20,7 +20,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        orange: "#D87D4A",
+        orange: "#B85C28",
         orangeLight: "#FBAF85",
         blacker: "#101010",
         black: "#000000",
@@ -30,7 +30,7 @@ const config: Config = {
         red: "#CD2C2C",
       },
       backgroundColor: {
-        orange: "#D87D4A",
+        orange: "#B85C28",
         orangeLight: "#FBAF85",
         blacker: "#101010",
         black: "#000000",
@@ -41,7 +41,7 @@ const config: Config = {
       },
       borderColor: {
         gray: "#CFCFCF",
-        orange: "#D87D4A",
+        orange: "#B85C28",
         red: "#CD2C2C",
       },
     },

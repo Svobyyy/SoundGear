@@ -6,7 +6,7 @@ export const checkNewLinesFeatures = (features: string) => {
     .filter((feature) => feature.trim() !== "") // Issue with splitting the string: it returned array with ['text', "\n", 'text'] creating unnecessary children with empty string. Therefore I filter out empty strings
     .map((feature, index) => (
       <li key={index}>
-        <p className="opacity-50">{feature}</p>
+        <p className="opacity-75">{feature}</p>
       </li>
     ));
 };

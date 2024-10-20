@@ -15,9 +15,9 @@ export default function Navbar({ background, category }: Props) {
     >
       <HamburgerMenu />
       <Link href={"/"} className="z-50">
-        <p className="logoTitle z-50 transition-colors hover:text-orange">
+        <h5 className="z-50 text-[15px] font-extrabold transition-colors hover:text-orange mob:text-[25px]">
           SoundGear
-        </p>
+        </h5>
       </Link>
       <ul className="subtitle z-50 hidden gap-[34px] font-bold tracking-[2px] transition-colors tab:flex">
         <NavigationLink link="home" />

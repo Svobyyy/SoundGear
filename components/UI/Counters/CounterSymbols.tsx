@@ -26,7 +26,7 @@ export default function CounterSymbols({
 
   return (
     <p
-      className={`cursor-pointer select-none ${isMainProduct ? "w-[55px] py-[16.5px]" : "w-[43px] py-[8.5px]"} text-center leading-none opacity-50 transition-all hover:text-orange hover:opacity-100`}
+      className={`cursor-pointer select-none ${isMainProduct ? "w-[55px] py-[16.5px]" : "w-[43px] py-[8.5px]"} text-center leading-none opacity-75 transition-all hover:text-orange hover:opacity-100`}
       onClick={() => {
         isMainProduct
           ? symbol === "+" // increase or decrease Product's Quantity State for "ADD TO CART"

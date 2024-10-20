@@ -10,7 +10,7 @@ export default function ProductText({ name, price }: Props) {
   return (
     <div>
       <p className="font-bold">{name}</p>
-      <p className="font-bold opacity-50">{formatPrice(price)}</p>
+      <p className="font-bold opacity-75">{formatPrice(price)}</p>
     </div>
   );
 }

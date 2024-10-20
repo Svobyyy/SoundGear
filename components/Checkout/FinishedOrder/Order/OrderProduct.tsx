@@ -30,7 +30,7 @@ export default function OrderProduct({ viewMore }: { viewMore: boolean }) {
         />
         <div>
           <p className="font-bold">{name}</p>
-          <p className="text-[14px] font-bold opacity-50">
+          <p className="text-[14px] font-bold opacity-75">
             {formatPrice(price)}
           </p>
         </div>

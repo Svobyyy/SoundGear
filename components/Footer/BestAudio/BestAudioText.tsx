@@ -4,7 +4,7 @@ export default function BestAudioText() {
       <h2>
         Bringing you the <span className="text-orange">best</span> audio gear
       </h2>
-      <p className="pt-8 opacity-50">
+      <p className="pt-8 opacity-75">
         Located at the heart of New York City, Audiophile is the premier store
         for high end headphones, earphones, speakers, and audio accessories. We
         have a large showroom and luxury demonstration rooms available for you
