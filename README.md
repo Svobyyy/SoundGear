@@ -63,7 +63,7 @@ Explore our range of **high-quality** audio products. 🎧
 
 ##
 
-- **Optimal Meta Data and SEO Optimization** 🌐
+- **Optimal Meta Data, Performance, Accessibility and SEO Optimization** 🌐
   
   - SEO-Friendly URL structure with a custom 404 Not Found page ✅
   - Meta tags for better search engine visibility ✅
@@ -71,7 +71,15 @@ Explore our range of **high-quality** audio products. 🎧
   - Accessible and mobile-friendly design ✅
  
   ![Not Found Page](https://github.com/user-attachments/assets/846f229b-27a2-4ce7-bbbd-dc2bb4ef636e)
-
+  ![first](https://github.com/user-attachments/assets/cdf59864-8db6-4c02-b83c-c4ab5f9e3681)
+  ![second](https://github.com/user-attachments/assets/1af6d139-b93d-4c64-b532-08c84292ef65)
+  ![third](https://github.com/user-attachments/assets/5eafd4e0-6cd7-49da-9db5-9ad029783e2a)
+  ![fourth](https://github.com/user-attachments/assets/3463a288-e139-40f6-af78-bb4015fc0010)
+  ![fifth](https://github.com/user-attachments/assets/b3a870bd-313e-4f5d-97bf-2188df242ea6)
+  ![sixth](https://github.com/user-attachments/assets/64bde0b8-bca2-4992-be76-de8177c43239)
+  ![seventh](https://github.com/user-attachments/assets/4804e82c-8dbe-4d39-af35-90b2a3218174)
+  ![eigth](https://github.com/user-attachments/assets/afae6114-00a0-42c2-ac16-9cbd2f930652)
+  
 ##
 
 - **Interactive User Interface**
