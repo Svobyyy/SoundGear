@@ -28,7 +28,7 @@ export default function CategoryMenu({ category, setMenu }: Props) {
         <Image
           width={width}
           height={height}
-          alt={`${category} image`}
+          alt={`${name} image`}
           quality={100}
           className="absolute top-[-52px] h-[139px] transition-transform duration-300 group-hover:translate-y-[-5px]"
           src={source}
