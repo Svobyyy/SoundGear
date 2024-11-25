@@ -8,8 +8,9 @@ import Summary from "./Summary";
 import { StripePayment } from "@/lib/StripePayment";
 import { useCartContext } from "@/contexts/CartContextProvider";
 import FinishedOrder from "./FinishedOrder/FinishedOrder";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { onDeliveryPayment } from "@/lib/onDeliveryPayment";
+import LoadingDelivery from "./LoadingDelivery/LoadingDelivery";
 
 export default function Checkout() {
   const {
@@ -22,18 +23,23 @@ export default function Checkout() {
     resolver: zodResolver(paymentSchema),
   });
 
+  const [LoadingDeliveryState, setLoadingDeliveryState] = useState(false);
   const { cart } = useCartContext();
 
   const onSubmit = async (data: PaymentSchema) => {
+    setLoadingDeliveryState(true);
+
     const formData = paymentSchema.safeParse(data);
 
     if (!formData.success) {
       alert(formData.error);
+      setLoadingDeliveryState(false);
       return reset();
     }
 
     if (formData.data.payment === "cash-on-delivery") {
-      onDeliveryPayment(cart, formData.data);
+      await onDeliveryPayment(cart, formData.data);
+      setLoadingDeliveryState(false);
       return reset();
     }
 
@@ -43,6 +49,7 @@ export default function Checkout() {
       alert((error as Error).message);
     }
 
+    setLoadingDeliveryState(true);
     return reset();
   };
 
@@ -55,6 +62,8 @@ export default function Checkout() {
         <Form watch={watch} reset={reset} register={register} errors={errors} />
         <Summary isSubmitting={isSubmitting} />
       </form>
+
+      <LoadingDelivery showSwitch={LoadingDeliveryState} />
 
       <Suspense>
         <FinishedOrder />
