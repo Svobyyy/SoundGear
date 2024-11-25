@@ -65,7 +65,13 @@ export default function Checkout() {
 
       <LoadingDelivery showSwitch={LoadingDeliveryState} />
 
-      <Suspense>
+      <Suspense
+        fallback={
+          <LoadingDelivery
+            showSwitch={LoadingDeliveryState === false && true}
+          />
+        }
+      >
         <FinishedOrder />
       </Suspense>
     </>
