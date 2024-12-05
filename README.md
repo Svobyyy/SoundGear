@@ -71,6 +71,7 @@ Explore our range of **high-quality** audio products. 🎧
   - Accessible and mobile-friendly design ✅
  
   ![Not Found Page](https://github.com/user-attachments/assets/846f229b-27a2-4ce7-bbbd-dc2bb4ef636e)
+<!--- 
   ![first](https://github.com/user-attachments/assets/cdf59864-8db6-4c02-b83c-c4ab5f9e3681)
   ![second](https://github.com/user-attachments/assets/1af6d139-b93d-4c64-b532-08c84292ef65)
   ![third](https://github.com/user-attachments/assets/5eafd4e0-6cd7-49da-9db5-9ad029783e2a)
@@ -79,7 +80,9 @@ Explore our range of **high-quality** audio products. 🎧
   ![sixth](https://github.com/user-attachments/assets/64bde0b8-bca2-4992-be76-de8177c43239)
   ![seventh](https://github.com/user-attachments/assets/4804e82c-8dbe-4d39-af35-90b2a3218174)
   ![eigth](https://github.com/user-attachments/assets/afae6114-00a0-42c2-ac16-9cbd2f930652)
-  
+   --->
+   ![unlighthouse](https://github.com/user-attachments/assets/1aef5e35-8f04-4752-98a6-606287d7efd0)
+
 ##
 
 - **Interactive User Interface**
